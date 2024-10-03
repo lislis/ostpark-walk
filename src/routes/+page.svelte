@@ -1,4 +1,4 @@
-<h1>Willkommen zur Ostpark-Experience!</h1>
+<h1 class="site-title">Willkommen zur Ostpark-Experience!</h1>
 
 <p>Lorem ipsum dolor sit amet!</p>
 
