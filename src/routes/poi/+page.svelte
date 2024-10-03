@@ -7,7 +7,7 @@
 
 <ul>
 {#each data.pois as poi}
-   <li><a href="/poi/{poi.id}">{poi.id}</a></li>
+   <li><a href="/poi/{poi.id}">{poi.title}</a> ({poi.type})</li>
 {:else}
   <li>Keine da</li>
 {/each}
