@@ -1,0 +1,32 @@
+body {
+  font-family: sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.2em 1.4em;
+  border-radius: 2rem;
+  font: inherit;
+  text-decoration: none;
+  color: inherit;
+  background-color: lightgrey;
+}
+
+.button:hover,
+.button:active {
+  background-color: grey;
+}
+
+.logo {
+  margin: 0;
+  line-height: 0;
+}
+
+header {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+}
