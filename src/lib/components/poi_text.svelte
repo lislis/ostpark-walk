@@ -6,7 +6,7 @@
 
  onMount(() => {
      if (text && text !== "") {
-         return fetchedText = fetch(`/${text}`)
+         return fetchedText = fetch(`${text}`)
              .then(d => d.text())
              .then(x => fetchedText = x);
      }

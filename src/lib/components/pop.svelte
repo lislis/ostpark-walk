@@ -1,6 +1,7 @@
 <script>
  export let title = undefined;
  export let id = undefined;
+ export let description = "";
 
  let path = `/poi/${id}`;
 
@@ -8,7 +9,8 @@
 
 {#if title && id}
 <div>
-    <p>{title}</p>
+    <p><strong>{title}</strong></p>
+    <p>{description}</p>
     <a class="button" href={ path } >Ansehen</a>
 </div>
 {/if}

@@ -4,22 +4,36 @@
     "id": 1,
     "type": "audio",
     "title": "POI A",
+    "description": "ein kurzer Text",
     "coords": [51.510913, 7.490240],
-    "text": "text1.txt"
+    "audioSrc": "/20shortsfstories_17_various_128kb.mp3",
+    "text": "/text1.txt"
   },
     {
     "id": 2,
     "type": "ar",
     "title": "POI B",
+    "description": "ein kurzer Text",
     "coords": [51.508440, 7.492021],
-    "text": "text2.txt"
+    "text": "/text2.txt"
   },
     {
     "id": 3,
     "type": "audio",
     "title": "POI C",
+    "description": "ein kurzer Text",
     "coords": [51.510090, 7.494993],
-    "text": "text2.txt"
+    "audioSrc": "/20shortsfstories_18_various_128kb.mp3",
+    "text": "/text2.txt"
+  },
+    {
+    "id": 4,
+    "type": "embed",
+    "title": "POI D",
+    "description": "was eingebettetes",
+    "coords": [51.510557, 7.492687],
+    "embedCode": "<iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/eVli-tstM5E?si=yLoDbYuimxZuTNRS' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
+    "text": "/text2.txt"
   }
   ]
 }

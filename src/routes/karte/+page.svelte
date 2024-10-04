@@ -47,7 +47,10 @@
     {#each data.pois as poi}
         <CircleMarker latLng={ poi.coords  } on:click={logMe} >
             <Popup options={{ content: `${poi.title}` }}>
-                <Pop title={ poi.title } id="{ poi.id }"/>
+                <Pop title={ poi.title }
+                     id={ poi.id }
+                     description={ poi.description }
+                />
             </Popup>
         </CircleMarker>
     {/each}

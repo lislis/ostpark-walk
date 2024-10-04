@@ -58,6 +58,19 @@ footer {
 
 main {
   flex: auto;
+  overflow-y: auto;
+  padding-bottom: 1em;
+}
+
+audio,
+iframe {
+  display: block;
+  margin: 1em 0;
+  width: 100% !important;
+}
+
+iframe {
+
 }
 
 .site-title {
