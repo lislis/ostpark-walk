@@ -1,0 +1,6 @@
+This is another text for dynamic loading.
+<br>
+Find me in /static/text2.txt or adjust the src/lib/data/data.json
+<br>
+<strong>interviewer</strong>: There can also be html.
+<br>

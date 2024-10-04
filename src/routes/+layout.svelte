@@ -1,7 +1,7 @@
 <script>
  import '../app.css'
 
- let src = "spp.png";
+ let src = "/spp.png";
 </script>
 
 <div class="wrapper">

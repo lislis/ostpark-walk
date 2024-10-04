@@ -4,19 +4,22 @@
     "id": 1,
     "type": "audio",
     "title": "POI A",
-    "coords": [51.510913, 7.490240]
+    "coords": [51.510913, 7.490240],
+    "text": "text1.txt"
   },
     {
     "id": 2,
     "type": "ar",
     "title": "POI B",
-    "coords": [51.508440, 7.492021]
+    "coords": [51.508440, 7.492021],
+    "text": "text2.txt"
   },
     {
     "id": 3,
     "type": "audio",
     "title": "POI C",
-    "coords": [51.510090, 7.494993]
+    "coords": [51.510090, 7.494993],
+    "text": "text2.txt"
   }
   ]
 }
