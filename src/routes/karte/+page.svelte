@@ -27,7 +27,6 @@
 </script>
 
 <Map options={{ center: center, zoom: 17 }} bind:instance={map}>
-
     <TileLayer
 	layerType="base"
 	name="OpenStreetMap.HOT"

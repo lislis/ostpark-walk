@@ -41,10 +41,19 @@ header {
   align-items: center;
 }
 
+footer {
+  position: fixed;
+  bottom: 0;
+  background: white;
+  z-index: 9999;
+  width: 100vw;
+  height: 5vh
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: 93vh;
 }
 
 main {
