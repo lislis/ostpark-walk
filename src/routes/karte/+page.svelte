@@ -1,6 +1,7 @@
 <script>
  import data from '$lib/data/data.json';
  import { Map, TileLayer, CircleMarker, Marker, Popup } from 'sveaflet';
+ import Pop from '$lib/components/pop.svelte';
 
  let map;
  let meMarker;
@@ -45,7 +46,9 @@
 
     {#each data.pois as poi}
         <CircleMarker latLng={ poi.coords  } on:click={logMe} >
-            <Popup options={{ content: `${poi.title}` }} />
+            <Popup options={{ content: `${poi.title}` }}>
+                <Pop title={ poi.title } id="{ poi.id }"/>
+            </Popup>
         </CircleMarker>
     {/each}
 
