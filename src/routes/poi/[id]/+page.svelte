@@ -10,6 +10,7 @@
 </script>
 
 
+{#if poi}
 <h1 class="site-title">{poi.title}</h1>
 <div>{@html poi.description}</div>
 
@@ -22,7 +23,8 @@
 {/if}
 
 {#if poi.type == 'ar'}
-    <PoiAr />
+    <PoiAr poi={poi} />
 {/if}
 
 <PoiText text={poi.text} />
+{/if}

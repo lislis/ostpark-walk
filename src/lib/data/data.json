@@ -15,6 +15,7 @@
     "title": "POI B",
     "description": "ein kurzer Text",
     "coords": [51.508440, 7.492021],
+    "gltf": "",
     "text": "/text2.txt"
   },
     {
