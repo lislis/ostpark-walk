@@ -92,3 +92,7 @@ iframe {
 .gridlike p {
   margin: 0;
 }
+
+.aframe {
+  height: 50vh;
+}
