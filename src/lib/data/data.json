@@ -6,8 +6,8 @@
     "title": "POI A",
     "description": "ein kurzer Text",
     "coords": [51.510913, 7.490240],
-    "audioSrc": "/20shortsfstories_17_various_128kb.mp3",
-    "text": "/text1.txt"
+    "audioSrc": "/audio/20shortsfstories_17_various_128kb.mp3",
+    "text": "/text/text1.txt"
   },
     {
     "id": 2,
@@ -15,8 +15,8 @@
     "title": "POI B",
     "description": "ein kurzer Text",
     "coords": [51.508440, 7.492021],
-    "gltf": "",
-    "text": "/text2.txt"
+    "gltf": "/models/character_jack.gltf",
+    "text": "/text/text2.txt"
   },
     {
     "id": 3,
@@ -24,8 +24,8 @@
     "title": "POI C",
     "description": "ein kurzer Text",
     "coords": [51.510090, 7.494993],
-    "audioSrc": "/20shortsfstories_18_various_128kb.mp3",
-    "text": "/text2.txt"
+    "audioSrc": "/audio/20shortsfstories_18_various_128kb.mp3",
+    "text": "/text/text2.txt"
   },
     {
     "id": 4,
@@ -34,7 +34,7 @@
     "description": "was eingebettetes",
     "coords": [51.510557, 7.492687],
     "embedCode": "<iframe width='560' height='315' src='https://www.youtube-nocookie.com/embed/eVli-tstM5E?si=yLoDbYuimxZuTNRS' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>",
-    "text": "/text2.txt"
+    "text": "/text/text2.txt"
   },
     {
     "id": 5,
@@ -42,7 +42,8 @@
     "title": "POI E",
     "description": "was mit AR",
     "coords": [51.510043, 7.492847],
-    "text": "/text2.txt"
+    "gltf": "character_witch.gltf",
+    "text": "/text/text2.txt"
   }
   ]
 }
