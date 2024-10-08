@@ -17,6 +17,7 @@
     <nav>
         <a href="/">Home</a>
         <a href="/karte">Karte</a>
+        <a href="/ar">AR</a>
         <a href="/poi">POIs</a>
         <a href="/hilfe">Hilfe</a>
     </nav>

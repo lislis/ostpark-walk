@@ -53,14 +53,14 @@ footer {
 .wrapper {
   display: flex;
   flex-direction: column;
-  height: 93vh;
+  height: 95vh;
 }
 
 main {
   flex: auto;
   overflow-y: auto;
   overflow-x: hidden;
-  padding-bottom: 1em;
+  padding-bottom: 2em;
 }
 
 audio,
