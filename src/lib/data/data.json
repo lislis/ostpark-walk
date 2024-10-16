@@ -44,6 +44,15 @@
     "coords": [51.510043, 7.492847],
     "gltf": "character_witch.gltf",
     "text": "/text/text2.txt"
+  },
+  {
+    "id": 6,
+    "type": "ar",
+    "title": "POI F",
+    "description": "was mit AR",
+    "coords": [51.52318, 7.45672],
+    "gltf": "character_witch.gltf",
+    "text": "/text/text2.txt"
   }
   ]
 }
