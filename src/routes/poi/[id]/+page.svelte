@@ -23,7 +23,7 @@
 {/if}
 
 {#if poi.type == 'ar'}
-    <PoiAr poi={poi} />
+    <PoiAr poi={poi.poi} />
 {/if}
 
 <PoiText text={poi.text} />
