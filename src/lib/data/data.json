@@ -49,9 +49,9 @@
     "id": 6,
     "type": "ar",
     "title": "POI F",
-    "description": "was mit AR",
+    "description": "snow",
     "coords": [51.52318, 7.45672],
-    "gltf": "character_witch.gltf",
+    "gltf": "snow.glb",
     "text": "/text/text2.txt"
   }
   ]
