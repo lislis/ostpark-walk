@@ -17,8 +17,6 @@
      return `latitude: ${myPos.latitude + (0.0001 * index)}; longitude: ${myPos.longitude + 0.0001 * index}`;
  }
 
-
-
 </script>
 
 
@@ -28,8 +26,8 @@
         <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
 
         {#each data.pois as poi, index}
-            <a-entity  gltf-model="url(/models/character_witch.gltf)"
-
+            <a-entity  gltf-model="url(/models/character_witc.glb)"
+                       animation-mixer
                       gps-new-entity-place={randPos(myPos, index)}
                                 scale="10 10 10"
                       position="0 30 0"

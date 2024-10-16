@@ -7,7 +7,6 @@
  let map;
  let meMarker;
 
- let clear;
  let outsidePark = false;
  let center = data.config.mapCenter;
 
