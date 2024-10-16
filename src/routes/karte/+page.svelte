@@ -18,12 +18,9 @@
              outsidePark = false;
              //map.locate();
              map.setView(meMarker);
-             //console.log("inside the park")
          } else {
              outsidePark = true;
-             map.setView(center);
              map.stopLocate();
-             //console.log("outside the park");
          }
      });
 
@@ -36,6 +33,10 @@
 
  function logMe() {
      console.log("logme")
+ }
+
+ function colorPOI(flag) {
+     return flag? 'blue' : 'green';
  }
 
 </script>
@@ -58,13 +59,17 @@
     {/if}
 
     {#each data.pois as poi}
-        <CircleMarker latLng={ poi.coords  } on:click={logMe} >
+        <CircleMarker latLng={ poi.coords}
+                      options={{ radius: data.config.radiusPOI,
+                                 color: colorPOI(poi.clickable) }}>
+            {#if poi.clickable}
             <Popup options={{ content: `${poi.title}` }}>
                 <Pop title={ poi.title }
                      id={ poi.id }
                      description={ poi.description }
                 />
             </Popup>
+            {/if}
         </CircleMarker>
     {/each}
 </Map>
