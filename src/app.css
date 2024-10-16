@@ -8,6 +8,8 @@ body {
   font-family: sans-serif;
   font-size: 1.6rem;
   line-height: 1.6;
+  margin: 0;
+  padding: 0.2em;
 }
 
 h1, h2, h3, h4, h5 {
@@ -95,4 +97,19 @@ iframe {
 
 .aframe {
   height: 50vh;
+}
+
+.outside-notice {
+  position: absolute;
+  height: calc(100% - 2em);
+  width: calc(100% - 0.4em);
+  background: rgba(50, 50, 50, 0.6);
+  top: 1.8em;
+  z-index: 9999;
+
+  p {
+    text-align: center;
+    transform: translateY(35vh);
+  }
+
 }

@@ -2,29 +2,42 @@
  import data from '$lib/data/data.json';
  import { Map, TileLayer, CircleMarker, Marker, Popup } from 'sveaflet';
  import Pop from '$lib/components/pop.svelte';
+ import { withinRadius } from '$lib/util.js'
 
  let map;
  let meMarker;
 
  let clear;
+ let outsidePark = false;
+ let center = data.config.mapCenter;
 
  $: if (map) {
      map.on('locationfound', function(ev){
-         // check four bounds around Ostpark?
          meMarker = ev.latlng;
-     })
+         if (withinRadius(ev.latlng, center, data.config.radiusPark)) {
+             outsidePark = false;
+             //map.locate();
+             map.setView(meMarker);
+             //console.log("inside the park")
+         } else {
+             outsidePark = true;
+             map.setView(center);
+             map.stopLocate();
+             //console.log("outside the park");
+         }
+     });
+
      map.locate({
-         setView: true,
-         watch:true,
+         setView: false,
+         watch: false,
          maxZoom: 19
      })
  }
 
- function logMe(ev) {
-     console.log("logged me")
+ function logMe() {
+     console.log("logme")
  }
 
- let center = [51.509640, 7.491308];
 </script>
 
 <Map options={{ center: center, zoom: 17 }} bind:instance={map}>
@@ -54,5 +67,12 @@
             </Popup>
         </CircleMarker>
     {/each}
-
 </Map>
+
+{#if outsidePark}
+
+    <div class="outside-notice">
+        <p>Du bist außerhalb des Parks</p>
+    </div>
+
+{/if}

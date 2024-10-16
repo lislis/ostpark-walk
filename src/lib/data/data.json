@@ -1,4 +1,9 @@
 {
+  "config": {
+    "mapCenter": [51.510043, 7.491710],
+    "radiusPark": 1000,
+    "radiusPOI": 10
+  },
   "pois": [
     {
     "id": 1,
