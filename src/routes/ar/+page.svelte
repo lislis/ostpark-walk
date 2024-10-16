@@ -28,8 +28,8 @@
         <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
 
         {#each data.pois as poi, index}
-            <a-entity material='color: red'
-                      geometry='primitive: box'
+            <a-entity  gltf-model="url(/models/character_witch.gltf)"
+
                       gps-new-entity-place={randPos(myPos, index)}
                                 scale="10 10 10"
                       position="0 30 0"

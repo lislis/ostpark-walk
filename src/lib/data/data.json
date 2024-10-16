@@ -50,6 +50,7 @@
     "type": "audio",
     "title": "POI E",
     "description": "ambient",
+    "audioSrc": "/audio/eichhoernchen.mp3",
     "coords": [51.510043, 7.492847],
     "clickable": false
   },
@@ -60,7 +61,8 @@
     "description": "snow",
     "coords": [51.52318, 7.45672],
     "gltf": "snow.glb",
-    "text": "/text/text2.txt"
+    "text": "/text/text2.txt",
+    "clickable": true
   }
   ]
 
