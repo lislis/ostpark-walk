@@ -6,7 +6,7 @@ Erstmal tief durchatmen. </p>
     <h2>Karte</h2>
     <div>
         <p>
-        In der Karten-Ansicht kannst du sehen, wo du dich gerade befindest und an welchen Orten sich verschiedene Medien verstecken. 
+        In der Karten-Ansicht kannst du sehen, wo du dich gerade befindest und an welchen Orten sich verschiedene Medien verstecken.<br> 
         <strong>Wichtig:</strong> Bitte gib der App die Berechtigung, auf deinen Standort zuzugreifen!
         </p>
     </div>
@@ -22,7 +22,7 @@ Erstmal tief durchatmen. </p>
     <div>
         <p>
         Das Rechteck steht für 3D-Elemente, die du durch deine Smartphone-Kamera sehen kannst. 
-        Wenn du in der Nähe des markierten Ortes bist, schalte auf die Kamera-Ansicht um. 
+        Wenn du in der Nähe des markierten Ortes bist, schalte auf die Kamera-Ansicht um. <br>
         <strong>Wichtig: </strong> Bitte gib der App die Berechtigung, auf deine Kamera zuzugreifen! 
         </p>
     </div>
