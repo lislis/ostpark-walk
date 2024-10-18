@@ -1,19 +1,18 @@
 <script>
  import data from '$lib/data/data.json';
- import { Map, TileLayer, CircleMarker, Marker, Popup } from 'sveaflet';
+ import { Map, TileLayer, Popup, Icon, LayerGroup, Marker } from 'sveaflet';
  import Pop from '$lib/components/pop.svelte';
- import { withinRadius } from '$lib/util.js'
+ import { withinRadius, haversine } from '$lib/util.js'
  import { goto } from '$app/navigation';
 
  let map;
  let meMarker;
  let outsidePark = false;
- let center;
 
- let coords1 = [52.5320503, 13.3513988];
- let coords2 = [52.5320003, 13.3513788];
+ let coords1 = [52.532331, 13.350593];
+ let coords2 = [52.531981, 13.351076];
 
- let audio;
+ let audio = new Audio();
 
  let point1 =  {
      "id": 1,
@@ -35,45 +34,36 @@
      coords: coords2
  };
 
+ let marker1;
+ let marker2;
 
- let once = true;
+ $: if(marker1 && marker2) {
+     L.featureGroup([marker1, marker2])
+      .on('click', (ev) => {
+          [point1, point2].forEach((val, key) => {
+              let clickedPoint = [ev.latlng.lat, ev.latlng.lng]
+              let h = haversine(clickedPoint, val.coords);
 
- $: if (map) {
-     map.on('locationfound', function(ev){
-         meMarker = ev.latlng;
-         center = meMarker;
-         locationUpdate();
-     });
+              if (h < data.config.radiusPOI) {
+                  //console.log(h);
+                  //console.log("clicked on marker ", val.id, val.title)
+                  goto(`/poi/${val.id}`);
+              }
+          })
+      }).addTo(map);
 
-     map.locate({
-         setView: true,
-         watch: true,
-         maxZoom: 19
-     })
  }
-
- function locationUpdate() {
-     //console.log("update")
-     [point1, point2].forEach((val, key) => {
-         if (withinRadius(meMarker, val.coords, 5)) {
-             if (val.clickable === false) {
-                 if (!audio.playing) {
-                     audio = new Audio(val.audioSrc);
-                     audio.play();
-                 }
-             } else {
-                 goto(`/poi/${val.id}`, { replaceState: false });
-             }
-
-         }
-     })
- }
-
+ navigator.geolocation.getCurrentPosition((position) => {
+     let pos = [position.coords.latitude, position.coords.longitude];
+     map.setView(pos);
+     meMarker = pos;
+     console.log(position);
+ });
 
 </script>
 
 
-<Map options={{ center, zoom: 17 }} bind:instance={map}>
+<Map options={{ center: data.config.mapCenter, zoom: 17 }} bind:instance={map}>
     <TileLayer
 	layerType="base"
 	           name="OpenStreetMap.HOT"
@@ -87,26 +77,36 @@
 
 
     {#if meMarker}
-        <CircleMarker latLng={ meMarker } options={{color: 'red'}} />
+
+        <Marker latLng={meMarker}>
+	    <Icon options={{ iconUrl: '/icons/shoes.svg',
+                          iconSize: [60, 60],
+		          iconAnchor: [30, 30] }} />
+	</Marker>
     {/if}
 
-    {#if coords1}
-        <CircleMarker latLng={ coords1 }
-                      options={{ radius: data.config.radiusPOI,
-                              color: 'blue' }}>
-            <Popup options={{ content: `${point1.title}` }}>
-                <Pop title={ point1.title }
-                     id={ point1.id }
-                     description={ point1.description }
-                />
-            </Popup>
-        </CircleMarker>
-    {/if}
 
-    {#if coords2}
-        <CircleMarker latLng={ coords2 }
-                      options={{ radius: data.config.radiusPOI,
-                              color: 'green' }}>
-        </CircleMarker>
-    {/if}
+    <Marker bind:instance={marker1} latLng={ coords1 }
+
+            options={{ radius: data.config.radiusPOI,
+                    color: 'blue',
+                    title: point1.id}}>
+        <Icon options={{
+                      iconUrl: '/icons/audio.svg',
+                      iconSize: [60, 75],
+		      iconAnchor: [30, 75]}} />
+    </Marker>
+
+
+    <Marker  bind:instance={marker2} latLng={ coords2 }
+
+             options={{ radius: data.config.radiusPOI,
+                     color: 'green',
+                     title: point2.id}}
+    >
+        <Icon options={{ iconUrl: '/icons/3d.svg',
+                      iconSize: [60, 75],
+		      iconAnchor: [30, 75] }} />
+    </Marker>
+
 </Map>
