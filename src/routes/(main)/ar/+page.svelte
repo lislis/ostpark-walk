@@ -14,20 +14,22 @@
  }
 
  function randPos(myPos, index) {
-     return `latitude: ${myPos.latitude + (0.0011 * index)}; longitude: ${myPos.longitude + 0.001 * index}`;
+     return `latitude: ${myPos.latitude + (0.001 * index)}; longitude: ${myPos.longitude + 0.001 * index}`;
  }
 
  let coords1 = [52.531106, 13.351918];
  let coords2 = [52.531311, 13.352691];
 
  let testCoords = [coords1, coords2];
+
+ let sound = `src: url(/audio/eichhoernchen.mp3); autoplay: true; on: click`;
 </script>
 
 
 {#if myPos}
 <div class="aframe">
     <a-scene vr-mode-ui='enabled: false' arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
-        <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
+        <a-camera gps-new-camera></a-camera>
 
         {#each testCoords as poi}
             <a-entity  gltf-model="url(/models/character_jack.gltf)"
@@ -35,6 +37,7 @@
                        gps-new-entity-place={poi}
                        scale="10 10 10"
                        position="0 0 0"
+                       sound
             ></a-entity>
         {/each}
 
