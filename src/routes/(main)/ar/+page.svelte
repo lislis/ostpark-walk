@@ -26,7 +26,7 @@
         <a-camera gps-new-camera='gpsMinDistance: 5'></a-camera>
 
         {#each data.pois as poi, index}
-            <a-entity  gltf-model="url(/models/character_witc.glb)"
+            <a-entity  gltf-model="url(/models/character_witch.gltf)"
                        animation-mixer
                       gps-new-entity-place={randPos(myPos, index)}
                                 scale="10 10 10"

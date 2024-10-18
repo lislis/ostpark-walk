@@ -1,4 +1,4 @@
-<h1 class="site-title">Hilfe</h1>
+<h1 class="a11y-hidden">Anleitung</h1>
 
 <div class="gridlike">
     <h2>GPS</h2>

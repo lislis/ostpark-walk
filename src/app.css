@@ -52,10 +52,19 @@ footer {
   height: 5vh
 }
 
-.wrapper {
+.wrapper,
+.wrapper-meta {
   display: flex;
   flex-direction: column;
+
+}
+
+.wrapper {
   height: 95vh;
+}
+
+.wrapper-meta {
+  height: 100vh;
 }
 
 main {
