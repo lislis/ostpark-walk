@@ -36,11 +36,15 @@ h1, h2, h3, h4, h5 {
   line-height: 0;
 }
 
-header {
+.wrapper header {
   display: flex;
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  width: 100vw;
+  left: 0;
+  z-index: 9999;
 }
 
 footer {

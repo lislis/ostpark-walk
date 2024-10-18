@@ -13,6 +13,7 @@
  let coords2 = [52.531981, 13.351076];
 
  let audio = new Audio();
+ let message = "";
 
  let point1 =  {
      "id": 1,
@@ -51,13 +52,48 @@
               }
           })
       }).addTo(map);
-
  }
- navigator.geolocation.getCurrentPosition((position) => {
+
+ function foundLocation(position) {
      let pos = [position.coords.latitude, position.coords.longitude];
      map.setView(pos);
      meMarker = pos;
-     console.log(position);
+     //console.log(position);
+
+     [point1, point2].every((val, key) => {
+         let h = haversine(meMarker, val.coords);
+         if (h < data.config.radiusPOI) {
+             message = "near POI " + val.id;
+
+             if (val.type === 'ar') {
+                 goto(`/ar`);
+             }
+
+             // assuming all !clickable are type === audio
+             if (val.clickable) {
+                 goto(`/poi/${val.id}`)
+             } else {
+                 if (audio.ended || audio.paused) {
+                     audio.pause();
+                     audio.src = val.audioSrc;
+                     audio.play();
+                 }
+             }
+             return false;
+         } else {
+             message = "nowhere near"
+         }
+         return true;
+     })
+ }
+
+ let watchId = navigator.geolocation.watchPosition(
+     foundLocation,
+     (error) => {
+         console.error(`ERROR(${err.code}): ${err.message}`);
+     }, {
+         enableHighAccuracy: false,
+         maximumAge: 5000
  });
 
 </script>
@@ -66,25 +102,14 @@
 <Map options={{ center: data.config.mapCenter, zoom: 17 }} bind:instance={map}>
     <TileLayer
 	layerType="base"
-	           name="OpenStreetMap.HOT"
+	name="OpenStreetMap.HOT"
         url={'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'}
-	           options={{
-		           maxZoom: 19,
-		           attribution:
-		           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
-		           }}
+	options={{
+		maxZoom: 19,
+		attribution:
+		'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+		}}
     />
-
-
-    {#if meMarker}
-
-        <Marker latLng={meMarker}>
-	    <Icon options={{ iconUrl: '/icons/shoes.svg',
-                          iconSize: [60, 60],
-		          iconAnchor: [30, 30] }} />
-	</Marker>
-    {/if}
-
 
     <Marker bind:instance={marker1} latLng={ coords1 }
 
@@ -109,4 +134,14 @@
 		      iconAnchor: [30, 75] }} />
     </Marker>
 
+
+    {#if meMarker}
+
+        <Marker latLng={meMarker}>
+	    <Icon options={{ iconUrl: '/icons/shoes.svg',
+                          iconSize: [60, 60],
+		          iconAnchor: [30, 30] }} />
+	</Marker>
+    {/if}
 </Map>
+<div>{ message }</div>
