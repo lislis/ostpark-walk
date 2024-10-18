@@ -2,8 +2,10 @@
  import data from '$lib/data/data.json';
  import { Map, TileLayer, Popup, Icon, LayerGroup, Marker } from 'sveaflet';
  import Pop from '$lib/components/pop.svelte';
- import { withinRadius, haversine } from '$lib/util.js'
+ import { iconPath, haversine } from '$lib/util.js'
  import { goto } from '$app/navigation';
+ import FloatyAudio from '$lib/components/floatyAudio.svelte';
+
 
  let map;
  let meMarker;
@@ -12,7 +14,6 @@
  let coords1 = [52.532331, 13.350593];
  let coords2 = [52.531981, 13.351076];
 
- let audio = new Audio();
  let message = "";
 
  let point1 =  {
@@ -35,67 +36,66 @@
      coords: coords2
  };
 
- let marker1;
- let marker2;
+ let points = [point1, point2];
+ let markers = Array.apply(null, Array(points.length)).map(function () {});
 
- $: if(marker1 && marker2) {
-     L.featureGroup([marker1, marker2])
+ let floatySrc;
+ let floatyTitle;
+ let floaty = false;
+
+
+ function foundLocation(position) {
+     let pos = [position.coords.latitude, position.coords.longitude];
+     map.setView(pos);
+     meMarker = pos;
+
+     points.forEach((val, index) => {
+         let h = haversine(meMarker, val.coords);
+         if (h < data.config.radiusPOI) {
+
+             // assuming all !clickable are type === audio
+             if (val.clickable) {
+                 markers[key]._icon.classList.add("jump")
+             } else {
+                 markers[key]._icon.classList.add("jump")
+                 floaty = true;
+                 floatySrc = val.audioSrc;
+                 floatyTitle = val.title;
+             }
+             return false;
+         } else {
+             floaty = false
+             markers[index]._icon.classList.remove("jump");
+         }
+     })
+ }
+
+ $: if(map) {
+     let watchId = navigator.geolocation.watchPosition(
+         foundLocation,
+         (error) => {
+             console.error(`ERROR(${err.code}): ${err.message}`);
+         }, {
+             enableHighAccuracy: false,
+             maximumAge: 1500
+     });
+     if (markers.every(x => x != undefined)) {
+
+     L.featureGroup(markers)
       .on('click', (ev) => {
-          [point1, point2].forEach((val, key) => {
+          points.forEach((val, key) => {
               let clickedPoint = [ev.latlng.lat, ev.latlng.lng]
               let h = haversine(clickedPoint, val.coords);
 
-              if (h < data.config.radiusPOI) {
+              if (h < data.config.radiusPOI && val.clickable) {
                   //console.log(h);
                   //console.log("clicked on marker ", val.id, val.title)
                   goto(`/poi/${val.id}`);
               }
           })
       }).addTo(map);
+     }
  }
-
- function foundLocation(position) {
-     let pos = [position.coords.latitude, position.coords.longitude];
-     map.setView(pos);
-     meMarker = pos;
-     //console.log(position);
-
-     [point1, point2].every((val, key) => {
-         let h = haversine(meMarker, val.coords);
-         if (h < data.config.radiusPOI) {
-             message = "near POI " + val.id;
-
-             if (val.type === 'ar') {
-                 goto(`/ar`);
-             }
-
-             // assuming all !clickable are type === audio
-             if (val.clickable) {
-                 goto(`/poi/${val.id}`)
-             } else {
-                 if (audio.ended || audio.paused) {
-                     audio.pause();
-                     audio.src = val.audioSrc;
-                     audio.play();
-                 }
-             }
-             return false;
-         } else {
-             message = "nowhere near"
-         }
-         return true;
-     })
- }
-
- let watchId = navigator.geolocation.watchPosition(
-     foundLocation,
-     (error) => {
-         console.error(`ERROR(${err.code}): ${err.message}`);
-     }, {
-         enableHighAccuracy: false,
-         maximumAge: 5000
- });
-
 </script>
 
 
@@ -111,32 +111,19 @@
 		}}
     />
 
-    <Marker bind:instance={marker1} latLng={ coords1 }
 
-            options={{ radius: data.config.radiusPOI,
-                    color: 'blue',
-                    title: point1.id}}>
-        <Icon options={{
-                      iconUrl: '/icons/audio.svg',
-                      iconSize: [60, 75],
-		      iconAnchor: [30, 75]}} />
-    </Marker>
-
-
-    <Marker  bind:instance={marker2} latLng={ coords2 }
-
-             options={{ radius: data.config.radiusPOI,
-                     color: 'green',
-                     title: point2.id}}
-    >
-        <Icon options={{ iconUrl: '/icons/3d.svg',
-                      iconSize: [60, 75],
-		      iconAnchor: [30, 75] }} />
-    </Marker>
-
+    {#each points as point, index}
+        <Marker bind:instance={markers[index]} latLng={ point.coords }
+                options={{ radius: data.config.radiusPOI,
+                        title: point.id}}>
+            <Icon options={{
+                          iconUrl: iconPath(point.type),
+                          iconSize: [60, 75],
+		          iconAnchor: [30, 75]}} />
+        </Marker>
+    {/each}
 
     {#if meMarker}
-
         <Marker latLng={meMarker}>
 	    <Icon options={{ iconUrl: '/icons/shoes.svg',
                           iconSize: [60, 60],
@@ -144,4 +131,7 @@
 	</Marker>
     {/if}
 </Map>
-<div>{ message }</div>
+
+{#if floaty}
+    <FloatyAudio audioSrc={floatySrc} title={floatyTitle} autoplay={true} />
+{/if}

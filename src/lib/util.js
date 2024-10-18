@@ -18,3 +18,14 @@ export function haversine(coord1, coord2){
   var d = R * c;
   return d * 1000; // meters
 }
+
+
+export function iconPath(typ) {
+  if (typ === "audio") {
+    return "/icons/audio.svg";
+  } else if (typ === "ar") {
+    return "/icons/3d.svg";
+  } else {
+    return "/icons/audio.svg";
+  }
+}
