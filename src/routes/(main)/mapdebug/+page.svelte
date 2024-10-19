@@ -52,21 +52,21 @@
      points.forEach((val, index) => {
          let h = haversine(meMarker, val.coords);
          if (h < data.config.radiusPOI) {
-
-             // assuming all !clickable are type === audio
-             if (val.clickable) {
-                 markers[key]._icon.classList.add("jump")
-             } else {
-                 markers[key]._icon.classList.add("jump")
-                 floaty = true;
-                 floatySrc = val.audioSrc;
-                 floatyTitle = val.title;
-             }
-             return false;
+             markers[index]._icon.classList.add("jump");
          } else {
-             floaty = false
              markers[index]._icon.classList.remove("jump");
          }
+     })
+
+     floaty = points.some((val, index) => {
+         let h = haversine(meMarker, val.coords);
+         if (h < data.config.radiusPOI
+             && !val.clickable
+             && val.type === 'audio') {
+             floatySrc = val.audioSrc;
+             floatyTitle = val.title;
+         }
+         return h < data.config.radiusPOI;
      })
  }
 
@@ -76,7 +76,7 @@
          (error) => {
              console.error(`ERROR(${err.code}): ${err.message}`);
          }, {
-             enableHighAccuracy: false,
+             enableHighAccuracy: true,
              maximumAge: 1500
      });
      if (markers.every(x => x != undefined)) {
