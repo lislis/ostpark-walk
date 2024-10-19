@@ -1,0 +1,29 @@
+{
+  "config": {
+    "mapCenter": [52.532331, 13.350593],
+    "radiusPark": 1000.0,
+    "radiusPOI": 10.0
+  },
+  "pois": [
+    {
+    "id": 1,
+    "type": "audio",
+    "title": "POI A",
+    "description": "ein kurzer Text",
+    "coords": [52.532331, 13.350593],
+    "audioSrc": "/audio/20shortsfstories_17_various_128kb.mp3",
+    "text": "/text/text1.txt",
+    "clickable": true
+  },
+    {
+    "id": 5,
+    "type": "sound",
+    "title": "POI E",
+    "description": "ambient",
+    "audioSrc": "/audio/eichhoernchen.mp3",
+    "coords": [52.531981, 13.351076],
+    "clickable": false
+  }
+  ]
+
+}

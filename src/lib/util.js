@@ -1,3 +1,5 @@
+import data from '$lib/data/data.json';
+
 // where point, center = [x, y]
 export const withinRadius = (point, center, radius) => {
   return Math.pow(point[0] - center[0], 2) + Math.pow(point[1] - center[1], 2) < Math.pow(radius, 2);
@@ -23,9 +25,28 @@ export function haversine(coord1, coord2){
 export function iconPath(typ) {
   if (typ === "audio") {
     return "/icons/audio.svg";
+  } else if (typ === "sound") {
+    return "/icons/ear.svg";
   } else if (typ === "ar") {
     return "/icons/3d.svg";
   } else {
     return "/icons/audio.svg";
   }
+}
+
+export function doesActivateFloatyPlayer(actualDistance, minDistance, point) {
+  return (actualDistance < minDistance
+    && !point.clickable
+          && point.type === 'audio');
+}
+
+export function checkForFloaty(currentPos, points, callback) {
+  points.some((val, index) => {
+    let h = haversine(currentPos, val.coords);
+    let isFloaty = doesActivateFloatyPlayer(h, data.config.radiusPOI, val);
+    if (isFloaty) {
+      callback(val);
+    }
+    return isFloaty;
+  });
 }

@@ -1,42 +1,16 @@
 <script>
- import data from '$lib/data/data.json';
+ import data from '$lib/data/lisa.json';
  import { Map, TileLayer, Popup, Icon, LayerGroup, Marker } from 'sveaflet';
  import Pop from '$lib/components/pop.svelte';
- import { iconPath, haversine } from '$lib/util.js'
+ import { iconPath, haversine, checkForFloaty } from '$lib/util.js'
  import { goto } from '$app/navigation';
  import FloatyAudio from '$lib/components/floatyAudio.svelte';
 
 
  let map;
  let meMarker;
- let outsidePark = false;
 
- let coords1 = [52.532331, 13.350593];
- let coords2 = [52.531981, 13.351076];
-
- let message = "";
-
- let point1 =  {
-     "id": 1,
-     "type": "audio",
-     "title": "POI A",
-     "description": "ein kurzer Text",
-     "audioSrc": "/audio/20shortsfstories_17_various_128kb.mp3",
-     "text": "/text/text1.txt",
-     "clickable": true,
-     coords: coords1
- };
- let point2 =     {
-     "id": 5,
-     "type": "audio",
-     "title": "POI E",
-     "description": "ambient",
-     "audioSrc": "/audio/eichhoernchen.mp3",
-     "clickable": false,
-     coords: coords2
- };
-
- let points = [point1, point2];
+ let points = data.pois;
  let markers = Array.apply(null, Array(points.length)).map(function () {});
 
  let floatySrc;
@@ -58,16 +32,10 @@
          }
      })
 
-     floaty = points.some((val, index) => {
-         let h = haversine(meMarker, val.coords);
-         if (h < data.config.radiusPOI
-             && !val.clickable
-             && val.type === 'audio') {
-             floatySrc = val.audioSrc;
-             floatyTitle = val.title;
-         }
-         return h < data.config.radiusPOI;
-     })
+     floaty = checkForFloaty(meMarker, points, (val) => {
+         floatySrc = val.audioSrc;
+         floatyTitle = val.title;
+     });
  }
 
  $: if(map) {

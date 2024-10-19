@@ -1,7 +1,7 @@
 <script>
  import data from '$lib/data/data.json';
  import { Map, TileLayer, Icon, Marker,  } from 'sveaflet';
- import { haversine, iconPath } from '$lib/util.js';
+ import { haversine, iconPath, checkForFloaty } from '$lib/util.js';
  import { goto } from '$app/navigation';
  import FloatyAudio from '$lib/components/floatyAudio.svelte';
 
@@ -30,32 +30,27 @@
          data.pois.forEach((val, index) => {
              let h = haversine(meMarker, val.coords);
              if (h < data.config.radiusPOI) {
-                 // assuming all !clickable are type === audio
-                 if (val.clickable) {
-                     markers[key]._icon.classList.add("jump")
-                 } else {
-                     markers[key]._icon.classList.add("jump")
-                     floaty = true;
-                     floatySrc = val.audioSrc;
-                     floatyTitle = val.title;
-                 }
+                 markers[index]._icon.classList.add("jump")
              } else {
-                 floaty = false;
-                 markers[key]._icon.classList.remove("jump");
+                 markers[index]._icon.classList.remove("jump");
              }
-         })
+         });
+
+         floaty = checkForFloaty(meMarker, points, (val) => {
+             floatySrc = val.audioSrc;
+             floatyTitle = val.title;
+         });
      }
  }
 
  $: if (map) {
-
      let watchId = navigator.geolocation.watchPosition(
          foundLocation,
          (error) => {
              console.error(`ERROR(${err.code}): ${err.message}`);
          }, {
              enableHighAccuracy: true,
-             maximumAge: 2500
+             maximumAge: 2000
      });
 
      if (markers.every(x => x != undefined)) {
@@ -77,13 +72,13 @@
 <Map options={{ center: center, zoom: 17 }} bind:instance={map}>
     <TileLayer
 	layerType="base"
-	name="OpenStreetMap.HOT"
+	           name="OpenStreetMap.HOT"
         url={'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'}
-	options={{
-		maxZoom: 19,
-		attribution:
-		'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
-		}}
+	           options={{
+		           maxZoom: 19,
+		           attribution:
+		           '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Tiles style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OpenStreetMap Team</a> hosted by <a href="https://openstreetmap.fr/" target="_blank">OpenStreetMap France</a>'
+		           }}
     />
 
 

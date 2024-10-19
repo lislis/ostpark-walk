@@ -47,7 +47,7 @@
   },
     {
     "id": 5,
-    "type": "audio",
+    "type": "sound",
     "title": "POI E",
     "description": "ambient",
     "audioSrc": "/audio/eichhoernchen.mp3",
