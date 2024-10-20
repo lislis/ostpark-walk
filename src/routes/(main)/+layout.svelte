@@ -1,4 +1,5 @@
 <script>
+ import MainNav from '$lib/components/main_nav.svelte';
 
  let src = "/spp.png";
 </script>
@@ -12,22 +13,5 @@
 <slot></slot>
 </main>
 
-<footer>
-    <nav>
-        <a href="/">Home</a>
-        <a href="/karte">
-           <img src="/icons/map.svg" width="30" alt="Karten-Icon" />
-           <span class="a11y-hidden">Karte</span>
-           </a>
-           <a href="/ar">
-               <img src="/icons/camera.svg" width="30" alt="Kamera-Icon" />
-               <span class="a11y-hidden">AR</span>
-           </a>
-        <a href="/anleitung">
-            <img src="/icons/question.svg" width="30" alt="Fragezeichen-Icon" />
-            <span class="a11y-hidden">Hilfe</span>
-        </a>
-        <a href="/mapdebug">mapdebug</a>
-    </nav>
-</footer>
+<MainNav />
 </div>

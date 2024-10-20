@@ -1,13 +1,14 @@
 <script>
  import { onMount } from 'svelte';
  import InfoGrid from '$lib/components/info_grid.svelte';
+ import MainNav from '$lib/components/main_nav.svelte';
 
- let intro = false;
+ let intro = true;
 
  onMount(() => {
      setTimeout(() => {
          intro = false;
-     }, 3000);
+     }, 2500);
  })
 
 </script>
@@ -43,6 +44,6 @@
 
         <InfoGrid />
 
-        <a href="/karte" class="button">Los geht's!</a>
+        <MainNav />
     </div>
 {/if}
