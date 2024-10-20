@@ -24,13 +24,13 @@ export function haversine(coord1, coord2){
 
 export function iconPath(typ) {
   if (typ === "audio") {
-    return "/icons/audio.svg";
+    return "/icons/audio-marker.svg";
   } else if (typ === "sound") {
-    return "/icons/ear.svg";
+    return "/icons/ear-marker.svg";
   } else if (typ === "ar") {
-    return "/icons/3d.svg";
+    return "/icons/3d-marker.svg";
   } else {
-    return "/icons/audio.svg";
+    return "/icons/audio-marker.svg";
   }
 }
 

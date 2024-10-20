@@ -93,7 +93,7 @@
 
     {#if meMarker}
         <Marker latLng={meMarker}>
-	    <Icon options={{ iconUrl: '/icons/shoes.svg',
+	    <Icon options={{ iconUrl: '/icons/shoes-marker.svg',
                           iconSize: [60, 60],
 		          iconAnchor: [30, 30] }} />
 	</Marker>
