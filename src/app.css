@@ -126,6 +126,30 @@ footer {
   }
 }
 
+.intro-screen-2 {
+  height: 100vh;
+  width: 100vw;
+  margin: -0.2em;
+  padding: 1em;
+  background-image: url('/background-sky.png');
+}
+
+.intro-screen-2 header {
+  display: flex;
+  flex-direction: column;
+
+  h1 {
+    margin: 1rem 0;
+  }
+  & + p {
+    margin-top: 0;
+  }
+}
+
+.intro-screen-2 .logo {
+  align-self: flex-end;
+}
+
 .tabnav {
   margin: 1em 0;
   font-size: 1.6rem;
@@ -166,7 +190,7 @@ iframe {
 .gridlike {
   display: grid;
   grid-template-rows: auto;
-  grid-template-columns: 3.5em 1fr;
+  grid-template-columns: 4rem 1fr;
   grid-row-gap: 1.4em;
 }
 
