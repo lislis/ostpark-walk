@@ -2,7 +2,7 @@
   "config": {
     "mapCenter": [51.510043, 7.491710],
     "radiusPark": 1000.0,
-    "radiusPOI": 10.0
+    "radiusPOI": 15.0
   },
   "pois": [
     {
