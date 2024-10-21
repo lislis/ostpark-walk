@@ -201,10 +201,12 @@ iframe {
 
 .outside-notice {
   position: absolute;
-  height: calc(100% - 2em);
-  width: calc(100% - 0.4em);
+  height: 100%;
+  width: 100%;
   background: rgba(50, 50, 50, 0.6);
-  top: 0.2em;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 9999;
 
   p {

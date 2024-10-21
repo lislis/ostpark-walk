@@ -1,9 +1,19 @@
 <script>
  import { page } from '$app/stores';
+ import {onMount} from 'svelte';
+
  let path;
  $: path = $page.url.pathname;
 
  let closeSrc = "/icons/close.png";
+
+ onMount(() => {
+     document.querySelector('html').classList.remove('a-fullscreen');
+     if (document.querySelector('video')) {
+         document.querySelector('video').remove();
+     }
+ })
+
 </script>
 
 <div class="wrapper-meta">

@@ -21,9 +21,13 @@
     "title": "POI B",
     "description": "ein kurzer Text",
     "coords": [51.508440, 7.492021],
-    "gltf": "/models/character_jack.gltf",
+    "gltf": "/models/ententanz.glb",
+    "gltfRotation": "0 30 0",
+    "gltfScale": "1 1 1",
+    "gltfPosition": "0 -1 0",
+    "audioSrc": "/audio/20shortsfstories_17_various_128kb.mp3",
     "text": "/text/text2.txt",
-    "clickable": true
+    "clickable": false
   },
     {
     "id": 3,
@@ -60,9 +64,13 @@
     "title": "POI F",
     "description": "snow",
     "coords": [51.52318, 7.45672],
-    "gltf": "snow.glb",
+    "gltf": "/models/snow.glb",
+    "gltfRotation": "0 30 0",
+    "gltfScale": "1 1 1",
+    "gltfPosition": "0 -1 0",
+    "audioSrc": "/audio/20shortsfstories_17_various_128kb.mp3",
     "text": "/text/text2.txt",
-    "clickable": true
+    "clickable": false
   }
   ]
 

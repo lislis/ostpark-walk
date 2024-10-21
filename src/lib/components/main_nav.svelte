@@ -12,6 +12,6 @@
             <img src="/icons/question-white.svg" width="40" alt="Fragezeichen-Icon" />
             <span class="a11y-hidden">Hilfe</span>
         </a>
-        <a href="/mapdebug">mapdebug</a>
+        <a href="/ardebug">ardebug</a>
     </nav>
 </footer>

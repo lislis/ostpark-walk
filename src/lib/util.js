@@ -36,15 +36,13 @@ export function iconPath(typ) {
 
 export function doesActivateFloatyPlayer(actualDistance, minDistance, point) {
   return (actualDistance < minDistance
-    && !point.clickable);
+          && point.audioSrc);
 }
 
 export function checkForFloaty(currentPos, points, callback) {
   return points.some((val, index) => {
     let h = haversine(currentPos, val.coords);
-//    console.log( data.config.radiusPOI)
     let isFloaty = doesActivateFloatyPlayer(h, data.config.radiusPOI, val);
-//    console.log(val, isFloaty)
     if (isFloaty) {
       callback(val);
     }

@@ -4,6 +4,7 @@
  import { haversine, iconPath, checkForFloaty } from '$lib/util.js';
  import { goto } from '$app/navigation';
  import FloatyAudio from '$lib/components/floatyAudio.svelte';
+ import {onMount} from 'svelte';
 
  let map;
  let meMarker;
@@ -15,6 +16,13 @@
  let floatySrc;
  let floatyTitle;
  let floaty = false;
+
+ onMount(() => {
+     document.querySelector('html').classList.remove('a-fullscreen');
+     if (document.querySelector('video')) {
+         document.querySelector('video').remove();
+     }
+ })
 
  function foundLocation(position) {
      let pos = [position.coords.latitude, position.coords.longitude];
@@ -50,7 +58,7 @@
              console.error(`ERROR(${err.code}): ${err.message}`);
          }, {
              enableHighAccuracy: true,
-             maximumAge: 2000
+             maximumAge: 1000
      });
 
      if (markers.every(x => x != undefined)) {

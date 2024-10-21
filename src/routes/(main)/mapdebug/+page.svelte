@@ -58,7 +58,11 @@
               if (h < data.config.radiusPOI && val.clickable) {
                   //console.log(h);
                   //console.log("clicked on marker ", val.id, val.title)
-                  goto(`/poi/${val.id}`);
+                  if (val.type === "ar") {
+                      goto(`/ar`);
+                  } else {
+                      goto(`/poi/${val.id}`);
+                  }
               }
           })
       }).addTo(map);

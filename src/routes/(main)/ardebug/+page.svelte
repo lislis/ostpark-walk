@@ -1,8 +1,9 @@
 <script>
- import data from '$lib/data/data.json';
+ import data from '$lib/data/lisa.json';
  import { browser } from '$app/environment';
- import FloatyAudio from '$lib/components/floatyAudio.svelte';
+  import FloatyAudio from '$lib/components/floatyAudio.svelte';
  import { checkForFloaty } from '$lib/util.js';
+
 
  let myPos;
  let arPOIs = data.pois.filter(x => x.type === "ar");
@@ -13,11 +14,10 @@
 
  function foundLocation(ev) {
      let myPos = [ev.coords.latitude, ev.coords.longitude];
-     //console.log("found")
 
      floaty = checkForFloaty(myPos, arPOIs, (val) => {
-         floatySrc = val.audioSrc;
-         floatyTitle = val.title;
+        floatySrc = val.audioSrc;   
+        floatyTitle = val.title; 
      });
  }
 
@@ -31,23 +31,25 @@
              maximumAge: 1000
      });
  }
+ 
 </script>
 
 <div class="aframe">
     <a-scene vr-mode-ui='enabled: false'
              arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
-        <a-camera gps-camera rotation-reader></a-camera>
+        <a-camera gps-projected-camera="maxDistance: 10;" rotation-reader></a-camera>
 
         {#each arPOIs as poi}
             <a-entity  gltf-model={ poi.gltf }
                        animation-mixer
-                       gps-entity-place={`latitude: ${poi.coords[0]}; longitude: ${poi.coords[1]}`},
+                       gps-projected-   entity-place={`latitude: ${poi.coords[0]}; longitude: ${poi.coords[1]}`},
                        scale={poi.gltfScale}
                        rotation={poi.gltfRotation}
                        position={poi.gltfPosition}
             >
             </a-entity>
         {/each}
+        
     </a-scene>
 </div>
 
