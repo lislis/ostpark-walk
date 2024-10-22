@@ -9,6 +9,7 @@
 
  let floatySrc;
  let floatyTitle;
+ let floatyId;
  let floaty = false;
 
  function foundLocation(ev) {
@@ -18,6 +19,7 @@
      floaty = checkForFloaty(myPos, arPOIs, (val) => {
          floatySrc = val.audioSrc;
          floatyTitle = val.title;
+         floatyId = val.id;
      });
  }
 
@@ -31,6 +33,16 @@
              maximumAge: 1000
      });
  }
+
+ function handlePlayerState(msg) {
+     if (msg.detail.text === "play") {
+         document.querySelector(`[data-instance-id="${floatyId}"]`).setAttribute('animation-mixer', '');
+     } else if (msg.detail.text === "pause") {
+         //console.log("rm")
+         document.querySelector(`[data-instance-id="${floatyId}"]`).removeAttribute('animation-mixer');
+     }
+ }
+
 </script>
 
 <div class="aframe">
@@ -39,12 +51,14 @@
         <a-camera gps-camera rotation-reader></a-camera>
 
         {#each arPOIs as poi}
-            <a-entity  gltf-model={ poi.gltf }
-                       animation-mixer
-                       gps-entity-place={`latitude: ${poi.coords[0]}; longitude: ${poi.coords[1]}`},
-                       scale={poi.gltfScale}
-                       rotation={poi.gltfRotation}
-                       position={poi.gltfPosition}
+            <a-entity
+                data-instance-id={poi.id}
+                gltf-model={ poi.gltf }
+                animation-mixer
+                gps-entity-place={`latitude: ${poi.coords[0]}; longitude: ${poi.coords[1]}`},
+                scale={poi.gltfScale}
+                rotation={poi.gltfRotation}
+                position={poi.gltfPosition}
             >
             </a-entity>
         {/each}
@@ -52,5 +66,8 @@
 </div>
 
 {#if floaty}
-    <FloatyAudio audioSrc={floatySrc} title={floatyTitle} autoplay={true} />
+    <FloatyAudio audioSrc={floatySrc}
+                 title={floatyTitle}
+                 autoplay={false}
+                 on:floatyplayer={handlePlayerState} />
 {/if}
