@@ -10,6 +10,6 @@ export let autoplay = false;
 {#if audioSrc}
 <div class="floaty-audio">
   <p>{title}</p>
-  <PoiAudio {audioSrc} {autoplay} />
+  <PoiAudio {audioSrc} {autoplay} on:floatyplayer />
 </div>
 {/if}

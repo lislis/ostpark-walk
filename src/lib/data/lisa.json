@@ -32,8 +32,8 @@
     "audioSrc": "/audio/eichhoernchen.mp3",
     "coords": [52.5320503, 13.3513988],
     "gltf": "/models/ententanz.glb",
-    "gltfScale": "1.5 1.5 1.5",
-    "gltfRotation": "0 -90 0",
+    "gltfScale": "1.1 1.1 1.1",
+    "gltfRotation": "0 110 0",
     "gltfPosition": "0 -1 0",
     "clickable": true
   },
