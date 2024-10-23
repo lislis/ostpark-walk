@@ -48,7 +48,7 @@
 <div class="aframe">
     <a-scene vr-mode-ui='enabled: false'
              arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
-        <a-camera gps-projected-camera rotation-reader far="20" near="5"></a-camera>
+        <a-camera gps-projected-camera rotation-reader far="30"></a-camera>
 
         {#each arPOIs as poi, index}
             <a-entity

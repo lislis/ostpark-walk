@@ -49,6 +49,32 @@
     "gltfRotation": "0 0 0",
     "gltfPosition": "0 -1 0",
     "clickable": true
+  },
+    {
+    "id": 5,
+    "type": "ar",
+    "title": "POI AR3",
+    "description": "ambient",
+    "audioSrc": "/audio/eichhoernchen.mp3",
+    "coords": [52.531209, 13.352295],
+    "gltf": "/models/ententanz.glb",
+    "gltfScale": "2 2 2",
+    "gltfRotation": "0 180 0",
+    "gltfPosition": "0 0 0",
+    "clickable": true
+  },
+    {
+    "id": 6,
+    "type": "ar",
+    "title": "POI AR3",
+    "description": "ambient",
+    "audioSrc": "/audio/eichhoernchen.mp3",
+    "coords": [52.531591, 13.353584],
+    "gltf": "/models/ententanz.glb",
+    "gltfScale": "3 3 3",
+    "gltfRotation": "0 -90 0",
+    "gltfPosition": "0 0-2 0",
+    "clickable": true
   }
 
   ]
