@@ -4,7 +4,6 @@
  import FloatyAudio from '$lib/components/floatyAudio.svelte';
  import { checkForFloaty } from '$lib/util.js';
 
-
  let myPos;
  let arPOIs = data.pois.filter(x => x.type === "ar");
  //let arEntities = Array.apply(null, Array(arPOIs.length)).map(function () {});
@@ -47,11 +46,13 @@
 
 <div class="aframe">
     <a-scene
-        gltf-model="dracoDecoderPath: draco/draco/;
-                    basisTranscoderPath: draco/transcoder/;
-                    meshoptDecoderPath: draco/meshopt_decoder.js;"
+        gltf-model="dracoDecoderPath: https://ostpark.netlify.app/draco/draco/;
+                    basisTranscoderPath: https://ostpark.netlify.app/draco/transcoder/;
+                    meshoptDecoderPath: https://ostpark.netlify.app/draco/meshopt_decoder.js;"
+        renderer="precision: mediump; antialias: false; alpha: true; logarithmicDepthBuffer: true; colorManagement: true;"
+
         vr-mode-ui='enabled: false'
-             arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+        arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false'>
         <a-camera gps-projected-camera rotation-reader far="30"></a-camera>
 
         {#each arPOIs as poi, index}

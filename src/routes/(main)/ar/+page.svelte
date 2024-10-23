@@ -47,10 +47,11 @@
 
 <div class="aframe">
     <a-scene vr-mode-ui='enabled: false'
-             arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'
-             gltf-model="dracoDecoderPath: draco/draco/;
-                         basisTranscoderPath: draco/transcoder/;
-                         meshoptDecoderPath: draco/meshopt_decoder.js;">
+             arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false'
+             renderer="precision: mediump; antialias: false; alpha: true; logarithmicDepthBuffer: true; colorManagement: true;"
+             gltf-model="dracoDecoderPath: https://ostpark.netlify.app/draco/draco/;
+                         basisTranscoderPath: https://ostpark.netlify.app/draco/transcoder/;
+                         meshoptDecoderPath: https://ostpark.netlify.app/draco/meshopt_decoder.js;">
         <a-camera gps-camera rotation-reader></a-camera>
 
         {#each arPOIs as poi}
