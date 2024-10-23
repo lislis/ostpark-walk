@@ -49,10 +49,9 @@
     <a-scene vr-mode-ui='enabled: false'
              arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false'
              renderer="precision: mediump; antialias: false; alpha: true; logarithmicDepthBuffer: true; colorManagement: true;"
-             gltf-model="dracoDecoderPath: https://ostpark.netlify.app/draco/draco/;
-                         basisTranscoderPath: https://ostpark.netlify.app/draco/transcoder/;
-                         meshoptDecoderPath: https://ostpark.netlify.app/draco/meshopt_decoder.js;">
+             gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/;">
         <a-camera gps-camera rotation-reader></a-camera>
+        <a-light type="ambient" intensity="0.6"></a-light>
 
         {#each arPOIs as poi}
             <a-entity
