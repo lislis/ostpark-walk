@@ -1,11 +1,20 @@
 <script>
- import data from '$lib/data/lisa.json';
+ import lisaData from '$lib/data/lisa.json';
+ import jolandaData from '$lib/data/jolanda.json';
  import { Map, TileLayer, Popup, Icon, LayerGroup, Marker } from 'sveaflet';
  import Pop from '$lib/components/pop.svelte';
  import { iconPath, haversine, checkForFloaty } from '$lib/util.js'
  import { goto } from '$app/navigation';
  import FloatyAudio from '$lib/components/floatyAudio.svelte';
 
+ export let data;
+ console.log(data.debug.debugUser);
+
+ if (data.debug.debugUser === 'lisa') {
+     data = lisaData;
+ } else if (data.debug.debugUser === 'jolanda') {
+     data = jolandaData;
+ }
 
  let map;
  let meMarker;

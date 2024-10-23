@@ -2,6 +2,9 @@
  import { page } from '$app/stores';
  import {onMount} from 'svelte';
 
+
+ export let data;
+
  let path;
  $: path = $page.url.pathname;
 
@@ -18,7 +21,11 @@
 
 <div class="wrapper-meta">
     <header class="meta-back">
-        <a href="/karte">zurück <img src={closeSrc} with="36" height="36" alt="schließen" /></a>
+        {#if data && data.debug.debug}
+            <a href="/mapdebug">zurück <img src={closeSrc} with="36" height="36" alt="schließen" /></a>
+        {:else }
+            <a href="/karte">zurück <img src={closeSrc} with="36" height="36" alt="schließen" /></a>
+        {/if}
     </header>
     <main>
         <div class="tabnav">
