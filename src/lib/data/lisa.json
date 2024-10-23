@@ -21,7 +21,7 @@
     "title": "POI E",
     "description": "ambient",
     "audioSrc": "/audio/eichhoernchen.mp3",
-    "coords": [52.531981, 13.351076],
+    "coords": [52.531960, 13.350750],
     "clickable": false
   },
     {
@@ -30,10 +30,10 @@
     "title": "POI AR1",
     "description": "ambient",
     "audioSrc": "/audio/eichhoernchen.mp3",
-    "coords": [52.5320503, 13.3513988],
+    "coords": [52.532012, 13.351244],
     "gltf": "/models/ententanz.glb",
-    "gltfScale": "1.1 1.1 1.1",
-    "gltfRotation": "0 110 0",
+    "gltfScale": "1.5 1.5 1.5",
+    "gltfRotation": "0 180 0",
     "gltfPosition": "0 -1 0",
     "clickable": true
   },
@@ -45,8 +45,8 @@
     "audioSrc": "/audio/eichhoernchen.mp3",
     "coords": [52.531506, 13.351518],
     "gltf": "/models/ententanz.glb",
-    "gltfScale": "1 1 1",
-    "gltfRotation": "0 0 0",
+    "gltfScale": "1.5 1.5 1.5",
+    "gltfRotation": "0 180 0",
     "gltfPosition": "0 -1 0",
     "clickable": true
   },
@@ -58,9 +58,9 @@
     "audioSrc": "/audio/eichhoernchen.mp3",
     "coords": [52.531209, 13.352295],
     "gltf": "/models/ententanz.glb",
-    "gltfScale": "2 2 2",
+    "gltfScale": "1.5 1.5 1.5",
     "gltfRotation": "0 180 0",
-    "gltfPosition": "0 0 0",
+    "gltfPosition": "0 -1 0",
     "clickable": true
   },
     {
@@ -71,9 +71,9 @@
     "audioSrc": "/audio/eichhoernchen.mp3",
     "coords": [52.531591, 13.353584],
     "gltf": "/models/ententanz.glb",
-    "gltfScale": "3 3 3",
-    "gltfRotation": "0 -90 0",
-    "gltfPosition": "0 0-2 0",
+    "gltfScale": "1.5 1.5 1.5",
+    "gltfRotation": "0 180 0",
+    "gltfPosition": "0 -1 0",
     "clickable": true
   }
 

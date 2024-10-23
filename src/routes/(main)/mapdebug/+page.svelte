@@ -8,7 +8,7 @@
  import FloatyAudio from '$lib/components/floatyAudio.svelte';
 
  export let data;
- console.log(data.debug.debugUser);
+ //console.log(data.debug.debugUser);
 
  if (data.debug.debugUser === 'lisa') {
      data = lisaData;
@@ -58,23 +58,25 @@
      });
      if (markers.every(x => x != undefined)) {
 
-     L.featureGroup(markers)
-      .on('click', (ev) => {
-          points.forEach((val, key) => {
-              let clickedPoint = [ev.latlng.lat, ev.latlng.lng]
-              let h = haversine(clickedPoint, val.coords);
+         L.featureGroup(markers)
+          .on('click', (ev) => {
+              points.forEach((val, key) => {
+                  let clickedPoint = [ev.latlng.lat, ev.latlng.lng]
+                  let h = haversine(clickedPoint, val.coords);
 
-              if (h < data.config.radiusPOI && val.clickable) {
-                  //console.log(h);
-                  //console.log("clicked on marker ", val.id, val.title)
-                  if (val.type === "ar") {
-                      goto(`/ar`);
-                  } else {
-                      goto(`/poi/${val.id}`);
+                  if (h < data.config.radiusPOI && val.clickable) {
+                      if (val.type === "ar") {
+                          if (data && data.debug && data.debug.debug) {
+                              goto(`/ardebug`);
+                          }  else {
+                              goto(`/ar`);
+                          }
+                      } else {
+                          goto(`/poi/${val.id}`);
+                      }
                   }
-              }
-          })
-      }).addTo(map);
+              })
+          }).addTo(map);
      }
  }
 </script>
@@ -83,13 +85,13 @@
 <Map options={{ center: data.config.mapCenter, zoom: 17 }} bind:instance={map}>
     <TileLayer
 	layerType="base"
-	name="OpenStreetMap.HOT"
+	           name="OpenStreetMap.HOT"
         url={'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'}
-	options={{
-		maxZoom: 19,
-		attribution:
-		'&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors. Tile style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OSM</a>, hosted by <a href="https://openstreetmap.fr/" target="_blank">OSM France</a>'
-		}}
+	           options={{
+		           maxZoom: 19,
+		           attribution:
+		           '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors. Tile style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OSM</a>, hosted by <a href="https://openstreetmap.fr/" target="_blank">OSM France</a>'
+		           }}
     />
 
 

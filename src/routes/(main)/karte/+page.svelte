@@ -68,7 +68,11 @@
                   let clickedPoint = [ev.latlng.lat, ev.latlng.lng]
                   let h = haversine(clickedPoint, val.coords);
                   if (h < data.config.radiusPOI && val.clickable) {
-                      goto(`/poi/${val.id}`);
+                      if (val.type === "ar") {
+                          goto(`/ar`);
+                      } else {
+                          goto(`/poi/${val.id}`);
+                      }
                   }
               })
           }).addTo(map);

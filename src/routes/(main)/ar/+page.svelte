@@ -47,7 +47,10 @@
 
 <div class="aframe">
     <a-scene vr-mode-ui='enabled: false'
-             arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'>
+             arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false' renderer='antialias: true; alpha: true'
+             gltf-model="dracoDecoderPath: draco/draco/;
+                         basisTranscoderPath: draco/transcoder/;
+                         meshoptDecoderPath: draco/meshopt_decoder.js;">
         <a-camera gps-camera rotation-reader></a-camera>
 
         {#each arPOIs as poi}
