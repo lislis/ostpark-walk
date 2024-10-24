@@ -1,8 +1,21 @@
 <script>
- import data from '$lib/data/lisa.json';
+ //import data from '$lib/data/lisa.json';
+ import lisaData from '$lib/data/lisa.json';
+ import jolandaData from '$lib/data/jolanda.json';
+ import marenData from '$lib/data/maren.json';
  import { browser } from '$app/environment';
  import FloatyAudio from '$lib/components/floatyAudio.svelte';
  import { checkForFloaty } from '$lib/util.js';
+
+ export let data;
+
+ if (data.debug.debugUser === 'lisa') {
+     data = lisaData;
+ } else if (data.debug.debugUser === 'jolanda') {
+     data = jolandaData;
+ } else if (data.debug.debugUser === 'maren') {
+     data = marenData;
+ }
 
  let myPos;
  let arPOIs = data.pois.filter(x => x.type === "ar");

@@ -101,6 +101,7 @@ Falls euch der Spaziergang gefallen hat, bitten wir euch, eine kleine Spende an 
             <select name="selectUser">
                 <option value="lisa" selected={data.debug.debugUser == 'lisa'}>lisa</option>
                 <option value="jolanda" selected={data.debug.debugUser == 'jolanda'}>jolanda</option>
+                <option value="maren" selected={data.debug.debugUser == 'maren'}>maren</option>
             </select>
         </label>
         <button type="submit">set</button>

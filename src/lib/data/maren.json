@@ -1,0 +1,54 @@
+{
+  "config": {
+    "mapCenter": [51.520037, 7.218835],
+    "radiusPark": 1000.0,
+    "radiusPOI": 15.0
+  },
+  "pois": [
+    {
+    "id": 1,
+    "type": "audio",
+    "title": "POI A",
+    "description": "ein kurzer Text",
+    "coords": [51.519883, 7.218985],
+    "audioSrc": "/audio/20shortsfstories_17_various_128kb.mp3",
+    "text": "/text/text1.txt",
+    "clickable": true
+  },
+    {
+    "id": 2,
+    "type": "sound",
+    "title": "POI E",
+    "description": "ambient",
+    "audioSrc": "/audio/eichhoernchen.mp3",
+    "coords": [51.520264, 7.218705],
+    "clickable": false
+  },
+    {
+    "id": 3,
+    "type": "ar",
+    "title": "POI AR1",
+    "description": "ambient",
+    "audioSrc": "/audio/eichhoernchen.mp3",
+    "coords": [51.519483, 7.219221],
+    "gltf": "/models/ententanz.glb",
+    "gltfScale": "1.5 1.5 1.5",
+    "gltfRotation": "0 180 0",
+    "gltfPosition": "0 -2 0",
+    "clickable": true
+  },
+    {
+    "id": 4,
+    "type": "ar",
+    "title": "POI AR2",
+    "description": "ambient",
+    "audioSrc": "/audio/eichhoernchen.mp3",
+    "coords": [51.520488, 7.218496],
+    "gltf": "/models/ententanz.glb",
+    "gltfScale": "1.5 1.5 1.5",
+    "gltfRotation": "0 180 0",
+    "gltfPosition": "0 -1 0",
+    "clickable": true
+  }
+  ]
+}

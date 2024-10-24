@@ -1,6 +1,7 @@
 <script>
  import lisaData from '$lib/data/lisa.json';
  import jolandaData from '$lib/data/jolanda.json';
+ import marenData from '$lib/data/maren.json';
  import { Map, TileLayer, Popup, Icon, LayerGroup, Marker } from 'sveaflet';
  import Pop from '$lib/components/pop.svelte';
  import { iconPath, haversine, checkForFloaty } from '$lib/util.js'
@@ -14,6 +15,8 @@
      data = lisaData;
  } else if (data.debug.debugUser === 'jolanda') {
      data = jolandaData;
+ } else if (data.debug.debugUser === 'maren') {
+     data = marenData;
  }
 
  let map;
