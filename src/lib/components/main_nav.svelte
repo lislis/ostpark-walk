@@ -7,6 +7,10 @@
 
 <footer>
     <nav class="mainnav">
+        <a href="/anleitung">
+            <img src="/icons/question-white.svg" width="40" alt="Fragezeichen-Icon" />
+            <span class="a11y-hidden">Hilfe</span>
+        </a>
         {#if debug && debug.debug.debug == true }
             <a href="/mapdebug">
                 <img src="/icons/map-white.svg" width="40" alt="Karten-Icon" />
@@ -26,9 +30,5 @@
                 <span class="a11y-hidden">Kamera</span>
             </a>
         {/if}
-        <a href="/anleitung">
-            <img src="/icons/question-white.svg" width="40" alt="Fragezeichen-Icon" />
-            <span class="a11y-hidden">Hilfe</span>
-        </a>
     </nav>
 </footer>

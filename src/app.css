@@ -71,8 +71,16 @@ a {
   width: 100vw;
   margin: -0.2em;
   background-repeat: repeat-x;
-  padding: 1em 1em 3em;
-  background-image: url('/background-sky.png')
+  padding: 1em 1em 5em;
+  background-image: url('/background-sky.png');
+
+  header {
+    display: flex;
+    flex-direction: column;
+  }
+  .logo {
+    align-self: flex-end;
+  }
 }
 
 .meta-back {

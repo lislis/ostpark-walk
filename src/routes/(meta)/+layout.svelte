@@ -1,6 +1,7 @@
 <script>
  import { page } from '$app/stores';
  import {onMount} from 'svelte';
+ import MainNav from '$lib/components/main_nav.svelte';
 
 
  export let data;
@@ -20,12 +21,12 @@
 </script>
 
 <div class="wrapper-meta">
-    <header class="meta-back">
-        {#if data && data.debug.debug}
-            <a href="/mapdebug">zurück <img src={closeSrc} with="36" height="36" alt="schließen" /></a>
-        {:else }
-            <a href="/karte">zurück <img src={closeSrc} with="36" height="36" alt="schließen" /></a>
-        {/if}
+    <header>
+        <div class="logo"><img src="/spp.png" width="130" alt="STERNA | PAU produktionen" /></div>
+        <h1>
+            <span class="a11y-hidden">Von anderen Zeiten</span>
+            <img src="/von-anderen-zeiten.svg" alt="">
+        </h1>
     </header>
     <main>
         <div class="tabnav">
@@ -37,5 +38,8 @@
         </div>
         <slot>
         </slot>
+
+
+        <MainNav debug={data} />
     </main>
 </div>
