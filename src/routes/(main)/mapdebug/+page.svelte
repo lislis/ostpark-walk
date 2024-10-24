@@ -7,6 +7,7 @@
  import { iconPath, haversine, checkForFloaty } from '$lib/util.js'
  import { goto } from '$app/navigation';
  import FloatyAudio from '$lib/components/floatyAudio.svelte';
+ import CenterButton from '$lib/components/center_button.svelte';
 
  export let data;
  //console.log(data.debug.debugUser);
@@ -19,6 +20,8 @@
      data = marenData;
  }
 
+ let centerMap = true;
+
  let map;
  let meMarker;
 
@@ -30,9 +33,17 @@
  let floaty = false;
 
 
+ function toggleCenterMap(msg) {
+     centerMap = msg.detail.text;
+     //console.log(msg)
+ }
+
+
  function foundLocation(position) {
      let pos = [position.coords.latitude, position.coords.longitude];
-     map.setView(pos);
+     if (centerMap) {
+         map.setView(pos);
+     }
      meMarker = pos;
 
      points.forEach((val, index) => {
@@ -117,6 +128,8 @@
 	</Marker>
     {/if}
 </Map>
+
+<CenterButton isCenter={centerMap} on:centermap-event={toggleCenterMap} />
 
 {#if floaty}
     <FloatyAudio audioSrc={floatySrc} title={floatyTitle} autoplay={true} />

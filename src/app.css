@@ -287,3 +287,17 @@ footer {
     color: white;
   }
 }
+
+.center-button {
+  position: absolute;
+  top: 6.6em;
+  z-index: 9999;
+  left: 1.2em;
+  line-height: 1;
+  display: block;
+  background: white;
+  border: 2px solid black;
+  border-radius: 4px;
+  padding: 0.3em;
+  cursor: pointer;
+}

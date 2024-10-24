@@ -5,6 +5,8 @@
  import { goto } from '$app/navigation';
  import FloatyAudio from '$lib/components/floatyAudio.svelte';
  import {onMount} from 'svelte';
+ import CenterButton from '$lib/components/center_button.svelte';
+
 
  let map;
  let meMarker;
@@ -16,6 +18,13 @@
  let floatySrc;
  let floatyTitle;
  let floaty = false;
+
+ let centerMap = true;
+
+ function toggleCenterMap(msg) {
+     centerMap = msg.detail.text;
+     //console.log(msg)
+ }
 
  onMount(() => {
      document.querySelector('html').classList.remove('a-fullscreen');
@@ -29,10 +38,14 @@
 
      if (haversine(pos, center) > data.config.radiusPark) {
          outsidePark = true;
-         map.setView(center);
+         if (centerMap) {
+             map.setView(center);
+         }
      } else {
          outsidePark = false;
-         map.setView(pos);
+         if (centerMap) {
+             map.setView(pos);
+         }
          meMarker = pos;
 
          data.pois.forEach((val, index) => {
@@ -118,6 +131,9 @@
         <p>Du bist außerhalb des Parks.</p>
     </div>
 {/if}
+
+<CenterButton isCenter={centerMap} on:centermap-event={toggleCenterMap} />
+
 
 {#if floaty}
     <FloatyAudio audioSrc={floatySrc} title={floatyTitle} autoplay="true" />
