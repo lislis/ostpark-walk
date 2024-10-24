@@ -20,7 +20,7 @@
      data = marenData;
  }
 
- let centerMap = true;
+ let centerMap = false;
 
  let map;
  let meMarker;

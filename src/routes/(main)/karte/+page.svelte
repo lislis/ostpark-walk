@@ -19,7 +19,7 @@
  let floatyTitle;
  let floaty = false;
 
- let centerMap = true;
+ let centerMap = false;
 
  function toggleCenterMap(msg) {
      centerMap = msg.detail.text;
