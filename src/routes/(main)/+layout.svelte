@@ -1,8 +1,6 @@
 <script>
  import MainNav from '$lib/components/main_nav.svelte';
 
- export let data;
-
  let src = "/spp.png";
 </script>
 
@@ -15,5 +13,5 @@
 <slot></slot>
 </main>
 
-<MainNav debug={data} />
+<MainNav />
 </div>

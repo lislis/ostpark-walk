@@ -1,11 +1,31 @@
 <script>
- import data from '$lib/data/data.json';
+ import lisaData from '$lib/data/lisa.json';
+ import jolandaData from '$lib/data/jolanda.json';
+ import marenData from '$lib/data/maren.json';
+
+ import origData from '$lib/data/data.json';
  import { Map, TileLayer, Icon, Marker,  } from 'sveaflet';
  import { haversine, iconPath, checkForFloaty } from '$lib/util.js';
  import { goto } from '$app/navigation';
  import FloatyAudio from '$lib/components/floatyAudio.svelte';
  import {onMount} from 'svelte';
  import CenterButton from '$lib/components/center_button.svelte';
+
+
+ export let data;
+ //console.log(data.debug.debugUser);
+
+ if (data.debug.debug) {
+     if (data.debug.debugUser === 'lisa') {
+         data = lisaData;
+     } else if (data.debug.debugUser === 'jolanda') {
+         data = jolandaData;
+     } else if (data.debug.debugUser === 'maren') {
+         data = marenData;
+     }
+ } else {
+     data = origData;
+ }
 
 
  let map;
@@ -43,10 +63,10 @@
          }
      } else {
          outsidePark = false;
+         meMarker = pos;
          if (centerMap) {
              map.setView(pos);
          }
-         meMarker = pos;
 
          data.pois.forEach((val, index) => {
              let h = haversine(meMarker, val.coords);

@@ -1,8 +1,28 @@
 <script>
- import data from '$lib/data/data.json';
+ import origData from '$lib/data/data.json';
+ import lisaData from '$lib/data/lisa.json';
+ import jolandaData from '$lib/data/jolanda.json';
+ import marenData from '$lib/data/maren.json';
+
  import { browser } from '$app/environment';
  import FloatyAudio from '$lib/components/floatyAudio.svelte';
  import { checkForFloaty } from '$lib/util.js';
+
+ export let data;
+ //console.log(data.debug.debugUser);
+
+ if (data.debug.debug) {
+     if (data.debug.debugUser === 'lisa') {
+         data = lisaData;
+     } else if (data.debug.debugUser === 'jolanda') {
+         data = jolandaData;
+     } else if (data.debug.debugUser === 'maren') {
+         data = marenData;
+     }
+ } else {
+     data = origData;
+ }
+
 
  let myPos;
  let arPOIs = data.pois.filter(x => x.type === "ar");
@@ -14,7 +34,6 @@
 
  function foundLocation(ev) {
      let myPos = [ev.coords.latitude, ev.coords.longitude];
-     //console.log("found")
 
      floaty = checkForFloaty(myPos, arPOIs, (val) => {
          floatySrc = val.audioSrc;
@@ -50,7 +69,7 @@
              arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false'
              renderer="precision: mediump; antialias: false; alpha: true; logarithmicDepthBuffer: true; colorManagement: true;"
              gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/;">
-        <a-camera gps-camera rotation-reader></a-camera>
+        <a-camera gps-projected-camera rotation-reader far="30"></a-camera>
         <a-light type="ambient" intensity="0.6"></a-light>
 
         {#each arPOIs as poi}
@@ -58,7 +77,7 @@
                 data-instance-id={poi.id}
                 gltf-model={ poi.gltf }
                 animation-mixer
-                gps-entity-place={`latitude: ${poi.coords[0]}; longitude: ${poi.coords[1]}`},
+                gps-projected-entity-place={`latitude: ${poi.coords[0]}; longitude: ${poi.coords[1]}`},
                 scale={poi.gltfScale}
                 rotation={poi.gltfRotation}
                 position={poi.gltfPosition}

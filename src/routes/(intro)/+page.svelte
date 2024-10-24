@@ -4,7 +4,6 @@
  import MainNav from '$lib/components/main_nav.svelte';
 
  let intro = true;
- export let data;
 
  onMount(() => {
      setTimeout(() => {
@@ -45,6 +44,6 @@
 
         <InfoGrid />
 
-        <MainNav debug={data} />
+        <MainNav />
     </div>
 {/if}

@@ -1,7 +1,7 @@
 <div class="gridlike">
     <h2>
         <span  class="a11y-hidden">Kopfhörer</span>
-        <img src="/icons/headphones.svg" width="40" height="40"></h2>
+        <img src="/icons/headphones.svg" width="40" height="40" alt=""></h2>
         <div>
             <p>
                 In der Karten-Ansicht kannst du sehen, wo du dich gerade befindest und an welchen Orten sich verschiedene Medien verstecken.<br>
@@ -11,7 +11,7 @@
 
     <h2>
         <span  class="a11y-hidden">Karte</span>
-        <img src="/icons/map.svg" width="40" height="40"></h2>
+        <img src="/icons/map.svg" width="40" height="40" alt=""></h2>
     <div>
         <p>
         In der Karten-Ansicht kannst du sehen, wo du dich gerade befindest und an welchen Orten sich verschiedene Medien verstecken.<br>
@@ -21,7 +21,7 @@
 
     <h2>
         <span  class="a11y-hidden">GPS</span>
-        <img src="/icons/shoes.svg" width="40" height="40"></h2>
+        <img src="/icons/shoes.svg" width="40" height="40" alt=""></h2>
     <div>
         <p>
         Im Zentrum der Karte siehst du deine Position auf der Karte.
@@ -30,7 +30,7 @@
 
     <h2>
         <span  class="a11y-hidden">3D</span>
-        <img src="/icons/3d.svg" width="40" height="40"></h2>
+        <img src="/icons/3d.svg" width="40" height="40" alt=""></h2>
     <div>
         <p>
         Das Rechteck steht für 3D-Elemente, die du durch deine Smartphone-Kamera sehen kannst.
@@ -41,7 +41,7 @@
 
     <h2>
         <span  class="a11y-hidden">Audio</span>
-        <img src="/icons/audio.svg" width="40" height="40"></h2>
+        <img src="/icons/audio.svg" width="40" height="40" alt=""></h2>
     <div>
         <p>
         Das Lautsprecher-Symbol steht für Medien, die man hören kann.
@@ -52,7 +52,7 @@
 
     <h2>
         <span  class="a11y-hidden">Kamera</span>
-        <img src="/icons/camera.svg" width="40" height="40"></h2>
+        <img src="/icons/camera.svg" width="40" height="40" alt=""></h2>
     <div>
         <p>
         In der Kamera-Ansicht kannst du die Welt um dich herum durch die Kamera deines Smartphones sehen.

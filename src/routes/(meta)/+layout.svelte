@@ -3,9 +3,6 @@
  import {onMount} from 'svelte';
  import MainNav from '$lib/components/main_nav.svelte';
 
-
- export let data;
-
  let path;
  $: path = $page.url.pathname;
 
@@ -40,6 +37,6 @@
         </slot>
 
 
-        <MainNav debug={data} />
+        <MainNav />
     </main>
 </div>
