@@ -92,5 +92,6 @@
     <FloatyAudio audioSrc={floatySrc}
                  title={floatyTitle}
                  autoplay={false}
+                 item2fetch={arPOIs.find(x => x.id == floatyId)}
                  on:floatyplayer={handlePlayerState} />
 {/if}

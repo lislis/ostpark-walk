@@ -240,16 +240,16 @@ iframe {
   background: white;
   z-index: 9999;
   width: auto;
-  left: 0;
-  right: 0;
+  left: 1.1rem;
+  right: 1.1rem;
   margin: 0.2em;
   border-radius: 20px;
   border: 4px black solid;
-  padding: 0.2em;
+  padding: 0.6em;
 
   p {
     margin: 0;
-    font-size: 0.6em;
+    font-size: 1rem;
   }
   audio {
     margin: 0;
@@ -300,4 +300,32 @@ footer {
   border-radius: 4px;
   padding: 0.3em;
   cursor: pointer;
+}
+
+.button {
+  font-size: 0.9rem;
+  background-color: white;
+  border: 3px solid black;
+  border-radius: 10px;
+  font-weight: 400;
+  padding: 0.5em 0.7em 0.4em;
+  line-height: 1;border-radius: 10px;
+  padding: 0.5em 0.7em 0.4em;
+  cursor: pointer;
+  &:hover {
+    background-color: white;
+  }
+}
+
+.transcript-container {
+  margin-top: 1em;
+  max-height: 20vh;
+  overflow-y: scroll;
+  scrollbar-color: black red;
+  scrollbar-width: thin;
+}
+
+.transcript {
+  font-size: 1rem;
+  margin-top: 1.4em;
 }

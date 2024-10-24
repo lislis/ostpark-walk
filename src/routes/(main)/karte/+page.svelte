@@ -37,6 +37,7 @@
  let center = data.config.mapCenter;
  let floatySrc;
  let floatyTitle;
+ let floatyId;
  let floaty = false;
 
  let centerMap = false;
@@ -77,9 +78,10 @@
              }
          });
 
-         floaty = checkForFloaty(meMarker, points, (val) => {
+         floaty = checkForFloaty(meMarker, data.pois, (val) => {
              floatySrc = val.audioSrc;
              floatyTitle = val.title;
+             floatyId = val.id;
          });
      }
  }
@@ -156,5 +158,8 @@
 
 
 {#if floaty}
-    <FloatyAudio audioSrc={floatySrc} title={floatyTitle} autoplay="true" />
+    <FloatyAudio audioSrc={floatySrc}
+                 title={floatyTitle}
+                 autoplay="true"
+                 item2fetch={data.pois.find(x => x.id === floatyId)} />
 {/if}
