@@ -290,9 +290,9 @@ footer {
 
 .center-button {
   position: absolute;
-  top: 6.6em;
+  top: 6rem;
   z-index: 9999;
-  left: 1.2em;
+  left: 1rem;
   line-height: 1;
   display: block;
   background: white;
