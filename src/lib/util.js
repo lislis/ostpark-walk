@@ -49,3 +49,33 @@ export function checkForFloaty(currentPos, points, callback) {
     return isFloaty;
   });
 }
+
+
+function toRadians(deg) {
+  return deg * Math.PI / 180;
+}
+
+function toDeg(rad) {
+  return rad * 180 / Math.PI;
+}
+
+export function calcBearing(old, mew) {
+  if (old && mew) {
+    let lat1 = toRadians(old[0]);
+    let lon1 = toRadians(old[1]);
+    let lat2 = toRadians(mew[0]);
+    let lon2 = toRadians(mew[1]);
+
+    let bearing = Math.atan2(
+      Math.sin(lon2 - lon1) * Math.cos(lat2),
+      Math.cos(lat1) * Math.sin(lat2) - Math.sin(lat1) * Math.cos(lat2) * Math.cos(lon2 - lon1)
+    );
+
+    bearing = toDeg(bearing);
+    bearing =(bearing + 360) % 360;
+    return bearing;
+  } else {
+    return false;
+  }
+
+}

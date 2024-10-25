@@ -5,7 +5,7 @@
 
  import origData from '$lib/data/data.json';
  import { Map, TileLayer, Icon, Marker,  } from 'sveaflet';
- import { haversine, iconPath, checkForFloaty } from '$lib/util.js';
+ import { haversine, iconPath, checkForFloaty, calcBearing } from '$lib/util.js';
  import { goto } from '$app/navigation';
  import FloatyAudio from '$lib/components/floatyAudio.svelte';
  import {onMount} from 'svelte';
@@ -30,6 +30,7 @@
 
  let map;
  let meMarker;
+ let selfLocation;
  // this will hold the representations of the POIs on the map
  // we can then identify the POI markers by index
  let markers = Array.apply(null, Array(data.pois.length)).map(function () {});
@@ -39,6 +40,7 @@
  let floatyTitle;
  let floatyId;
  let floaty = false;
+ let bearing = 0;
 
  let centerMap = false;
 
@@ -64,7 +66,18 @@
          }
      } else {
          outsidePark = false;
+         bearing = calcBearing(meMarker, pos);
+         console.log(bearing, selfLocation)
+         if (bearing != 0) {
+             let t = selfLocation._icon.style.transform;
+             t += ` rotation(${bearing}deg)`
+             selfLocation._icon.style.transform = t;
+             //selfLocation._icon.style
+             //debugger
+         }
+
          meMarker = pos;
+
          if (centerMap) {
              map.setView(pos);
          }
@@ -130,7 +143,7 @@
 
 
     {#if meMarker}
-        <Marker latLng={meMarker} options={{ title: "Du"}}>
+        <Marker bind:instance={selfLocation} latLng={meMarker} options={{ title: "Du" }}>
 	    <Icon options={{ iconUrl: '/icons/shoes-marker.svg',
                           iconSize: [60, 60],
 		          iconAnchor: [30, 30] }} />
