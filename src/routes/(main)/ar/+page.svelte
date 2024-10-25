@@ -67,8 +67,7 @@
 <div class="aframe">
     <a-scene vr-mode-ui='enabled: false'
              arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false'
-             renderer="precision: mediump; antialias: false; alpha: true; logarithmicDepthBuffer: true; colorManagement: true;"
-             gltf-model="dracoDecoderPath: https://cdn.8thwall.com/web/aframe/draco-decoder/;">
+             renderer="precision: mediump; antialias: false; alpha: true; logarithmicDepthBuffer: true; colorManagement: true;">
         <a-camera gps-projected-camera rotation-reader far="30"></a-camera>
 
         {#each arPOIs as poi}
@@ -82,7 +81,7 @@
                 position={poi.gltfPosition}
             >
             </a-entity>
-            <a-light type="point" intensity="0.9" position={poi.gltfPosition}></a-light>
+
 
         {/each}
     </a-scene>
