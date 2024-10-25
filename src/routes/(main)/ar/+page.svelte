@@ -68,7 +68,8 @@
     <a-scene vr-mode-ui='enabled: false'
              arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false'
              renderer="precision: mediump; antialias: false; alpha: true; logarithmicDepthBuffer: true; colorManagement: true;">
-        <a-camera gps-projected-camera rotation-reader far="30"></a-camera>
+        <a-camera gps-projected-camera rotation-reader near="1" far="50"></a-camera>
+        <a-light type="point" intensity="0.9" position="0 0 0"></a-light>
 
         {#each arPOIs as poi}
             <a-entity
