@@ -29,8 +29,8 @@
 
 
  let map;
+ let watchId;
  let meMarker;
- let selfLocation;
  // this will hold the representations of the POIs on the map
  // we can then identify the POI markers by index
  let markers = Array.apply(null, Array(data.pois.length)).map(function () {});
@@ -74,9 +74,9 @@
          data.pois.forEach((val, index) => {
              let h = haversine(meMarker, val.coords);
              if (h < data.config.radiusPOI) {
-                 markers[index]._icon.classList.add("jump")
+                 markers[index]?._icon?.classList.add("jump")
              } else {
-                 markers[index]._icon.classList.remove("jump");
+                 markers[index]?._icon?.classList.remove("jump");
              }
          });
 
@@ -89,7 +89,7 @@
  }
 
  $: if (map) {
-     let watchId = navigator.geolocation.watchPosition(
+     watchId = navigator.geolocation.watchPosition(
          foundLocation,
          (error) => {
              console.error(`ERROR(${err.code}): ${err.message}`);
@@ -97,23 +97,6 @@
              enableHighAccuracy: true,
              maximumAge: 1000
      });
-
-     if (markers.every(x => x != undefined)) {
-         L.featureGroup(markers)
-          .on('click', (ev) => {
-              data.pois.forEach((val, key) => {
-                  let clickedPoint = [ev.latlng.lat, ev.latlng.lng]
-                  let h = haversine(clickedPoint, val.coords);
-                  if (h < data.config.radiusPOI && val.clickable) {
-                      if (val.type === "ar") {
-                          goto(`/ar`);
-                      } else {
-                          goto(`/poi/${val.id}`);
-                      }
-                  }
-              })
-          }).addTo(map);
-     }
  }
 
 </script>
@@ -121,18 +104,18 @@
 <Map options={{ center: center, zoom: 17 }} bind:instance={map}>
     <TileLayer
 	layerType="base"
-	           name="OpenStreetMap.HOT"
+	name="OpenStreetMap.HOT"
         url={'https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png'}
-	options= {{
-		 maxZoom: 19,
-		 attribution:
-		 '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors. Tile style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OSM</a>, hosted by <a href="https://openstreetmap.fr/" target="_blank">OSM France</a>'
-		 }}
+	           options= {{
+		            maxZoom: 19,
+		            attribution:
+		            '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> contributors. Tile style by <a href="https://www.hotosm.org/" target="_blank">Humanitarian OSM</a>, hosted by <a href="https://openstreetmap.fr/" target="_blank">OSM France</a>'
+		            }}
     />
 
 
     {#if meMarker}
-        <Marker bind:instance={selfLocation} latLng={meMarker} options={{ title: "Du" }}>
+        <Marker latLng={meMarker} options={{ title: "Du" }}>
 	    <Icon options={{ iconUrl: '/icons/shoes-marker.svg',
                           iconSize: [60, 60],
 		          iconAnchor: [30, 30] }} />
@@ -158,10 +141,9 @@
 
 <CenterButton isCenter={centerMap} on:centermap-event={toggleCenterMap} />
 
-
 {#if floaty}
     <FloatyAudio audioSrc={floatySrc}
                  title={floatyTitle}
-                 autoplay="true"
+                 autoplay={data.pois.find(x => x.id === floatyId).clickable}
                  item2fetch={data.pois.find(x => x.id === floatyId)} />
 {/if}

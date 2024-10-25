@@ -7,7 +7,10 @@ export const withinRadius = (point, center, radius) => {
 
 
 // distance of coords to meters
-export function haversine(coord1, coord2){
+export function haversine(coord1, coord2) {
+  if (coord1.length !== 2 || coord2.length !== 2) {
+    return false;
+  }
   let [lat1, lon1] = coord1;
   let [lat2, lon2] = coord2;
   var R = 6378.137; // Radius of earth in KM
