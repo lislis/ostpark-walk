@@ -8,9 +8,5 @@
             <img src="/icons/map-white.svg" width="40" alt="Karten-Icon" />
             <span class="a11y-hidden">Karte</span>
         </a>
-        <a href="/ar">
-            <img src="/icons/camera-white.svg" width="40" alt="Kamera-Icon" />
-            <span class="a11y-hidden">Kamera</span>
-        </a>
     </nav>
 </footer>

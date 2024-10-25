@@ -236,7 +236,7 @@ iframe {
 
 .floaty-audio {
   position: absolute;
-  bottom: 5em;
+  bottom: 6rem;
   background: white;
   z-index: 9999;
   width: auto;
@@ -309,8 +309,9 @@ footer {
   border-radius: 10px;
   font-weight: 400;
   padding: 0.5em 0.7em 0.4em;
-  line-height: 1;border-radius: 10px;
-  padding: 0.5em 0.7em 0.4em;
+  line-height: 1;
+  border-radius: 10px;
+  padding: 0.3em 0.7em 0.2em;
   cursor: pointer;
   &:hover {
     background-color: white;
@@ -328,4 +329,9 @@ footer {
 .transcript {
   font-size: 1rem;
   margin-top: 1.4em;
+}
+
+.transcript-header {
+  display: flex;
+  justify-content: space-between;
 }
