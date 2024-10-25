@@ -5,7 +5,7 @@
 
  import origData from '$lib/data/data.json';
  import { Map, TileLayer, Icon, Marker,  } from 'sveaflet';
- import { haversine, iconPath, checkForFloaty, calcBearing } from '$lib/util.js';
+ import { haversine, iconPath, checkForFloaty } from '$lib/util.js';
  import { goto } from '$app/navigation';
  import FloatyAudio from '$lib/components/floatyAudio.svelte';
  import {onMount} from 'svelte';
@@ -40,7 +40,6 @@
  let floatyTitle;
  let floatyId;
  let floaty = false;
- let bearing = 0;
 
  let centerMap = false;
 
@@ -66,16 +65,6 @@
          }
      } else {
          outsidePark = false;
-         bearing = calcBearing(meMarker, pos);
-         console.log(bearing, selfLocation)
-         if (bearing != 0) {
-             let t = selfLocation._icon.style.transform;
-             t += ` rotation(${bearing}deg)`
-             selfLocation._icon.style.transform = t;
-             //selfLocation._icon.style
-             //debugger
-         }
-
          meMarker = pos;
 
          if (centerMap) {
