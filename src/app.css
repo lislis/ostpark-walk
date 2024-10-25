@@ -303,6 +303,7 @@ footer {
 }
 
 .button {
+  min-height: 40px;
   font-size: 0.9rem;
   background-color: white;
   border: 3px solid black;
