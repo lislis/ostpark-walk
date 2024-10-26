@@ -1,8 +1,8 @@
 <footer>
     <nav class="mainnav">
     <a href="/karte">
-            <img src="/icons/map-white.svg" width="40" alt="Karten-Icon" />
-            <span class="a11y-hidden">Karte</span>
+            <img src="/icons/home.svg" width="40" alt="Home-Icon" />
+            <span class="a11y-hidden">Home</span>
         </a>
         
         <a href="/anleitung">

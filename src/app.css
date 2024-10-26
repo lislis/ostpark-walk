@@ -291,7 +291,7 @@ footer {
 .center-button {
   position: absolute;
   top: 6rem;
-  z-index: 9999;
+  z-index: 9998;
   left: 1rem;
   line-height: 1;
   display: block;
@@ -316,6 +316,11 @@ footer {
   cursor: pointer;
   &:hover {
     background-color: white;
+  }
+  display: flex;
+  align-items: center;
+  img {
+    margin-right: .3em;
   }
 }
 

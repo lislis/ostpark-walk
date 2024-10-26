@@ -41,8 +41,15 @@
 
                     {#if item2fetch.type === "ar" && $page.url.pathname !== '/ar' }
                         <a href="/ar" title="Kameraansicht" class="button">
-                            <span class="a11y-hidden">in Kameraansicht wechseln</span>
+
                             <img src="/icons/camera.svg" width="24" height="24" alt="" />
+                            <span class="">Kameraansicht</span>
+                        </a>
+                    {:else}
+                        <a href="/karte" title="Kartenansicht" class="button">
+
+                            <img src="/icons/map.svg" width="24" height="24" alt="" />
+                            <span class="">Kartenansicht</span>
                         </a>
                     {/if}
                 </div>
