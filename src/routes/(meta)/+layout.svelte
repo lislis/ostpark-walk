@@ -19,7 +19,13 @@
 
 <div class="wrapper-meta">
     <header>
-        <div class="logo"><img src="/spp.png" width="130" alt="STERNA | PAU produktionen" /></div>
+
+        <div class="logo">
+            <a href="/anleitung" title="Hilfeseite">
+                <img src="/spp.png" width="130" alt="sterna | pau produktionen" />
+            </a>
+        </div>
+
         <h1>
             <span class="a11y-hidden">Von anderen Zeiten</span>
             <img src="/von-anderen-zeiten.svg" alt="">

@@ -52,7 +52,7 @@ a {
   position: absolute;
   width: 100vw;
   left: 0;
-  z-index: 9999;
+  z-index: 99999;
 }
 
 .wrapper,
@@ -317,6 +317,15 @@ footer {
   &:hover {
     background-color: white;
   }
+}
+
+.button.cta {
+  font-size: 1.6rem;
+}
+
+.intro-cta {
+  text-align: center;
+  margin-top: 2em;
 }
 
 .transcript-container {

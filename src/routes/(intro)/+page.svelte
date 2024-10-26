@@ -44,6 +44,10 @@
 
         <InfoGrid />
 
+        <div class="intro-cta">   
+        <a class="button cta" href="/karte" title="Kartenansicht">Los geht's</a>
+        </div>
+
         <MainNav />
     </div>
 {/if}
