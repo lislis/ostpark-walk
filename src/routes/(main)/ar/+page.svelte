@@ -52,15 +52,15 @@
              maximumAge: 1000
      });
  }
-
- function handlePlayerState(msg) {
-     if (msg.detail.text === "play") {
-         document.querySelector(`[data-instance-id="${floatyId}"]`).setAttribute('animation-mixer', '');
-     } else if (msg.detail.text === "pause") {
-         //console.log("rm")
-         document.querySelector(`[data-instance-id="${floatyId}"]`).removeAttribute('animation-mixer');
-     }
- }
+ /*
+  *  function handlePlayerState(msg) {
+  *      if (msg.detail.text === "play") {
+  *          document.querySelector(`[data-instance-id="${floatyId}"]`).setAttribute('animation-mixer', '');
+  *      } else if (msg.detail.text === "pause") {
+  *          //console.log("rm")
+  *          document.querySelector(`[data-instance-id="${floatyId}"]`).removeAttribute('animation-mixer');
+  *      }
+  *  } */
 
 </script>
 
@@ -77,21 +77,20 @@
                 gltf-model={ poi.gltf }
                 animation-mixer
                 gps-projected-entity-place={`latitude: ${poi.coords[0]}; longitude: ${poi.coords[1]}`},
+                animation-mixer
                 scale={poi.gltfScale}
                 rotation={poi.gltfRotation}
                 position={poi.gltfPosition}
             >
             </a-entity>
 
-
         {/each}
     </a-scene>
-</div>
+</div>x
 
 {#if floaty}
     <FloatyAudio audioSrc={floatySrc}
                  title={floatyTitle}
                  autoplay={false}
-                 item2fetch={arPOIs.find(x => x.id == floatyId)}
-                 on:floatyplayer={handlePlayerState} />
+                 item2fetch={arPOIs.find(x => x.id == floatyId)} />
 {/if}
