@@ -34,8 +34,8 @@
     "coords": [51.51142, 7.49112],
     "text": "/text/text3.txt",
     "gltf": "/models/snow2.glb",
-    "gltfScale": "1 1 1",
-    "gltfRotation": "0 180 0",
+    "gltfScale": "1.5 1.5 1.5",
+    "gltfRotation": "0 0 0",
     "gltfPosition": "0 -2 0",
     "clickable": true
   },
@@ -69,7 +69,7 @@
     "gltf": "/models/bee.glb",
     "gltfScale": "1 1 1",
     "gltfRotation": "0 0 0",
-    "gltfPosition": "0 0 0",
+    "gltfPosition": "0 -1 0",
     "clickable": true
   },
     {
