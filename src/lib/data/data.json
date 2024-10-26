@@ -96,7 +96,7 @@
     "id": 9,
     "type": "audio",
     "title": "Interview mit einer Statue",
-    "description": "Interview",
+    "description": "Interview",y
     "coords": [51.5100408, 7.4939388],
     "text": "/text/text9.txt",
     "audioSrc": "/audio/statue_final.mp3",
