@@ -11,7 +11,7 @@
     "title": "Was ist eigentlich Zeit?",
     "description": "Interviews mit Friedhofsbesucher:innen",
     "coords": [51.5115361, 7.4901253],
-    "audioSrc": "/audio/Was ist eigentlich Zeit.mp3",
+    "audioSrc": "/audio/ostpar_wasistzeit.mp3",
     "text": "/text/text1.txt",
     "clickable": true
   },
@@ -20,10 +20,10 @@
     "type": "audio",
     "title": "Interview mit einem Bestatter",
     "description": "Interview mit einem Bestatter",
-    "audioSrc": "/audio/Bestattungen und Zeit.mp3",
+    "audioSrc": "/audio/bestatter.mp3",
     "coords": [51.511135, 7.49095],
     "text": "/text/text2.txt",
-    "clickable": false
+    "clickable": true
   },
     {
     "id": 3,
@@ -32,33 +32,29 @@
     "description": "Interview mit einer Denkmalpflegerin",
     "audioSrc": "/audio/Persephone.mp3",
     "coords": [51.51142, 7.49112],
-          "text": "/text/text3.txt",
-    "gltf": "/models/ententanz.glb",
-    "gltfScale": "1.5 1.5 1.5",
+    "text": "/text/text3.txt",
+    "gltf": "/models/snow.glb",
+    "gltfScale": "1 1 1",
     "gltfRotation": "0 180 0",
     "gltfPosition": "0 -2 0",
     "clickable": true
   },
     {
     "id": 4,
-    "type": "ar",
-    "title": "gute Wiese",
-    "description": "ambient",
+    "type": "audio",
+    "title": "Was ist eigentlich Zeit? Teil 2",
+    "description": "Interviews mit Friedhofsbesucher:innen",
     "coords": [51.5112671, 7.4920931],
-
-    "gltf": "/models/ententanz.glb",
-    "gltfScale": "1.5 1.5 1.5",
-    "gltfRotation": "0 180 0",
-    "gltfPosition": "0 -1 0",
+    "text": "/text/text4.txt",
     "clickable": true
   },
     {
     "id": 5,
     "type": "ar",
     "title": "Das Leben eines Kohlenstoffatoms",
-    "description": "ambient",
+    "description": "Text",
     "coords": [51.5108014, 7.4937470],
-    "audioSrc": "/audio/Kohlenstoff.mp3",
+    "audioSrc": "/audio/kohlenstoffkreislauf_klein.mp3",
     "text": "/text/text5.txt",
     "clickable": true
   },
@@ -66,7 +62,7 @@
     "id": 6,
     "type": "ar",
     "title": "Immer fleißig immer busy",
-    "description": "ambient",
+    "description": "Text",
     "coords": [51.5099202, 7.4928079],
     "audioSrc": "/audio/Zeitgerechtigkeit.mp3",
     "text": "/text/text6.txt",
@@ -79,11 +75,11 @@
     {
     "id": 7,
     "type": "audio",
-    "title": "Self Care",
-    "description": "Text",
+    "title": "Lieblingsorte",
+    "description": "Interviews mit Friedhofsbesucher:innen",
     "coords": [51.5088827, 7.4916190],
     "text": "/text/text7.txt",
-    "audioSrc": "/audio/Self Care.mp3",
+    "audioSrc": "/audio/lieblingsorte.mp3",
     "clickable": true
   },
     {
@@ -93,7 +89,7 @@
     "description": "Text",
     "coords": [51.5100408, 7.4896670],
     "text": "/text/text8.txt",
-    "audioSrc": "/audio/Eichhoernchen.mp3",
+    "audioSrc": "/audio/eichhörnchen_final.mp3",
     "clickable": true
   },
     {
@@ -103,7 +99,7 @@
     "description": "Interview",
     "coords": [51.5100408, 7.4939388],
     "text": "/text/text9.txt",
-    "audioSrc": "/audio/Self Care.mp3",
+    "audioSrc": "/audio/statue_final.mp3",
     "clickable": true
   },
     {
@@ -114,6 +110,16 @@
     "coords": [51.5083689, 7.4902967],
     "text": "/text/text10.txt",
     "audioSrc": "/audio/Beschleunigung.mp3",
+    "clickable": true
+  },
+    {
+    "id": 11,
+    "type": "audio",
+    "title": "Self&Care",
+    "description": "Text",
+    "coords": [51.5108204, 7.4901528],
+    "text": "/text/text11.txt",
+    "audioSrc": "/audio/selfcare_final.mp3",
     "clickable": true
   }
   ]
