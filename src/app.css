@@ -326,6 +326,7 @@ footer {
 
 .button.cta {
   font-size: 1.6rem;
+  display: inline-block;
 }
 
 .intro-cta {

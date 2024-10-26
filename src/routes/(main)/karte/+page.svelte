@@ -144,6 +144,6 @@
 {#if floaty}
     <FloatyAudio audioSrc={floatySrc}
                  title={floatyTitle}
-                 autoplay={data.pois.find(x => x.id === floatyId).clickable}
+                 autoplay={false}
                  item2fetch={data.pois.find(x => x.id === floatyId)} />
 {/if}
