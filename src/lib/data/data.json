@@ -1,7 +1,7 @@
 {
   "config": {
     "mapCenter": [51.527105, 7.456453],
-    "radiusPark": 1000.0,
+    "radiusPark": 1200.0,
     "radiusPOI": 15.0
   },
   "pois": [
@@ -96,7 +96,7 @@
     "id": 9,
     "type": "audio",
     "title": "Interview mit einer Statue",
-    "description": "Interview",y
+    "description": "Interview",
     "coords": [51.5100408, 7.4939388],
     "text": "/text/text9.txt",
     "audioSrc": "/audio/statue_final.mp3",

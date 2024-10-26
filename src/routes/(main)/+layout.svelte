@@ -7,7 +7,8 @@
 <div class="wrapper">
 <header>
 <h1 class="logo">
-<a href="/anleitung" title="Hilfeseite"><img {src} width="130" alt="sterna | pau produktionen" /></a></h1>
+<a href="/anleitung" title="Hilfeseite"><img {src} width="130" alt="sterna | pau produktionen" /></a>
+</h1>
 </header>
 
 <main>
