@@ -67,9 +67,9 @@
     "audioSrc": "/audio/Zeitgerechtigkeit.mp3",
     "text": "/text/text6.txt",
     "gltf": "/models/bee.glb",
-    "gltfScale": "1.5 1.5 1.5",
-    "gltfRotation": "0 180 0",
-    "gltfPosition": "0 -1 0",
+    "gltfScale": "1 1 1",
+    "gltfRotation": "0 0 0",
+    "gltfPosition": "0 0 0",
     "clickable": true
   },
     {
