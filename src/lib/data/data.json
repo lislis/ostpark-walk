@@ -121,6 +121,42 @@
     "text": "/text/text11.txt",
     "audioSrc": "/audio/selfcare_final.mp3",
     "clickable": true
+  },
+    {
+    "id": 12,
+    "type": "ar",
+    "title": "Eichhörnchen1",
+    "description": "animation",
+    "coords": [51.50965, 7.49139],
+    "gltf": "/models/squirrel.glb",
+    "gltfScale": "1 1 1",
+    "gltfRotation": "0 0 0",
+    "gltfPosition": "0 -1 0",
+    "clickable": true
+  },
+    {
+    "id": 13,
+    "type": "ar",
+    "title": "Eichhörnchen2",
+    "description": "animation",
+    "coords": [51.5090043, 7.4939760],
+    "gltf": "/models/squirrel2.glb",
+    "gltfScale": "1 1 1",
+    "gltfRotation": "0 0 0",
+    "gltfPosition": "0 -1 0",
+    "clickable": true
+  },
+    {
+    "id": 14,
+    "type": "ar",
+    "title": "Eichhörnchen3",
+    "description": "animation",
+    "coords": [51.5099710, 7.4902310],
+    "gltf": "/models/squirrel3.glb",
+    "gltfScale": "1 1 1",
+    "gltfRotation": "0 0 0",
+    "gltfPosition": "0 -1 0",
+    "clickable": true
   }
   ]
 }
