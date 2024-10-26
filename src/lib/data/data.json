@@ -33,7 +33,7 @@
     "audioSrc": "/audio/Persephone.mp3",
     "coords": [51.51142, 7.49112],
     "text": "/text/text3.txt",
-    "gltf": "/models/snow.glb",
+    "gltf": "/models/falling_snow_loop.glb",
     "gltfScale": "1 1 1",
     "gltfRotation": "0 180 0",
     "gltfPosition": "0 -2 0",
