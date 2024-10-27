@@ -54,7 +54,7 @@
 
     <h2>
         <span  class="a11y-hidden">Fragen</span>
-        <img src="/icons/questions.svg" width="40" height="40" alt=""></h2>
+        <img src="/icons/question.svg" width="40" height="40" alt=""></h2>
     <div>
         <p>
         In der Kamera-Ansicht kannst du die Welt um dich herum durch die Kamera deines Smartphones sehen.
