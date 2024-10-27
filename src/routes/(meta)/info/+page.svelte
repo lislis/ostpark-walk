@@ -45,7 +45,7 @@ Das Projekt lädt dazu ein, sich Zeit zu nehmen, eine Pause zu machen und Orte d
 
 <p>
 <strong>Termine</strong><br>
-Eröffnungswalks mit performativen Elementen:
+Eröffnungswalks mit performativen Elementen:<br>
 Sonntag, 27.10.2024, 16 Uhr <br>
 Samstag, 02.11.2024, 16 Uhr <br>
 Ostfriedhof, Dortmund <br>
@@ -72,7 +72,7 @@ diese durch Technik, Digitalität und Popkultur geprägt sind. Ihre Agenda ist k
 
 <p>
 <strong>So erreichst du uns</strong><br>
-Per Mail: <a href="mailto:info@sternapau.de">info@sternapau.de</a>
+Per Mail: <a href="mailto:info@sternapau.de">info@sternapau.de</a><br>
 Instagram: <a href="https://www.instagram.com/sterna.pau/">@sterna.pau</a>
 </p>
 
