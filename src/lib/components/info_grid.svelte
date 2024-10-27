@@ -2,7 +2,7 @@
 
     <h2>
         <span  class="a11y-hidden">Karte</span>
-        <img src="/icons/home.svg" width="40" height="40" alt=""></h2>
+        <img src="/icons/home_black.svg" width="40" height="40" alt=""></h2>
     <div>
         <p>
         In der Karten-Ansicht hast du die Übersicht über den gesamten Ostfriedhof. Die verschiedenen Symbole wie Lautsprecher, Rechteck etc. markieren die Orte, an denen du Inhalte entdecken kannst. Wenn du nah genug bist, um auf sie zuzugreifen, beginnen sie zu hüpfen!<br>
