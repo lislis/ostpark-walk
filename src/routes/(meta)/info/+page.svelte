@@ -59,6 +59,11 @@ Dieses Projekt war nur durch die Unterstützung vieler toller Menschen vor Ort u
 Wir bedanken uns bei: Bosse, Marie, Lennart, Sebastian, Fabian, Lisa, Dagmar, René, Jan, Julia, Anna und Sarah.
 Außerdem bei der Friedhofsverwaltung für die Unterstützung.
 </p>
+<p>
+<strong>"Von anderen Zeiten" wird gefördert durch</strong><br>
+ <img src="/icons/kulturbuero.png" width="425" height="109" alt=""><br>
+ <img src="/icons/sparkasse.png" width="318" height="84" alt="">
+</p>
 
 <p>
 <strong>Über uns</strong><br>
@@ -88,11 +93,6 @@ Instagram: <a href="https://www.instagram.com/sterna.pau/">@sterna.pau</a>
 Theresa Bücker (2024), "Alle Zeit". Ullstein Verlag.
 </p>
 
-<p>
-<strong>"Von anderen Zeiten" wird gefördert durch</strong><br>
- <img src="/icons/kulturbuero.png" width="850" height="218" alt=""><br>
- <img src="/icons/sparkasse.png" width="636" height="169" alt="">
-</p>
 
 <div>
     <strong>Debug</strong>
