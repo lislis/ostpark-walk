@@ -34,7 +34,7 @@
     "coords": [51.51142, 7.49112],
     "text": "/text/text3.txt",
     "gltf": "/models/snow2.glb",
-    "gltfScale": "1.5 1.5 1.5",
+    "gltfScale": "2 2 2",
     "gltfRotation": "0 0 0",
     "gltfPosition": "0 -2 0",
     "clickable": true
@@ -61,7 +61,7 @@
     {
     "id": 6,
     "type": "ar",
-    "title": "Immer fleißig immer busy",
+    "title": "Zeitgerechtigkeit",
     "description": "Text",
     "coords": [51.5099202, 7.4928079],
     "audioSrc": "/audio/Zeitgerechtigkeit.mp3",
@@ -125,7 +125,7 @@
     {
     "id": 12,
     "type": "ar",
-    "title": "Eichhörnchen1",
+    "title": "Herbst",
     "description": "animation",
     "coords": [51.50965, 7.49139],
     "audioSrc": "/audio/rain.mp3",
@@ -138,7 +138,7 @@
     {
     "id": 13,
     "type": "ar",
-    "title": "Eichhörnchen2",
+    "title": "Winter",
     "description": "animation",
     "coords": [51.5090043, 7.4939760],
     "audioSrc": "/audio/snowsounds.mp3",
@@ -151,7 +151,7 @@
     {
     "id": 14,
     "type": "ar",
-    "title": "Eichhörnchen3",
+    "title": "Sommer",
     "description": "animation",
     "coords": [51.5099710, 7.4902310],
     "audioSrc": "/audio/birds.mp3",
