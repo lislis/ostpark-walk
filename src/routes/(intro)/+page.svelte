@@ -44,6 +44,9 @@
 
         <InfoGrid />
 
+        <p>Alles klar soweit? Wenn nicht, erklärt sich das meiste gleich auch von selbst, einfach mal ausprobieren. </p>
+
+
         <div class="intro-cta">   
         <a class="button cta" href="/karte" title="Kartenansicht">Los geht's</a>
         </div>
