@@ -130,7 +130,7 @@
     "coords": [51.50965, 7.49139],
     "audioSrc": "/audio/rain.mp3",
     "gltf": "/models/squirrel.glb",
-    "gltfScale": "1 1 1",
+    "gltfScale": "2 2 2",
     "gltfRotation": "0 0 0",
     "gltfPosition": "0 -1 0",
     "clickable": true
@@ -143,7 +143,7 @@
     "coords": [51.5090043, 7.4939760],
     "audioSrc": "/audio/snowsounds.mp3",
     "gltf": "/models/squirrel2.glb",
-    "gltfScale": "1 1 1",
+    "gltfScale": "2 2 2",
     "gltfRotation": "0 0 0",
     "gltfPosition": "0 -1 0",
     "clickable": true
@@ -154,9 +154,9 @@
     "title": "Eichhörnchen3",
     "description": "animation",
     "coords": [51.5099710, 7.4902310],
-    "audioSrc": "/audio/rain.mp3",
+    "audioSrc": "/audio/birds.mp3",
     "gltf": "/models/squirrel3.glb",
-    "gltfScale": "1 1 1",
+    "gltfScale": "2 2 2",
     "gltfRotation": "0 0 0",
     "gltfPosition": "0 -1 0",
     "clickable": true
