@@ -98,7 +98,7 @@
     "title": "Interview mit einer Statue",
     "description": "Interview",
     "coords": [51.5100408, 7.4939388],
-    "text": "/text/text9.txt",
+    "text": "/text/txt9.txt",
     "audioSrc": "/audio/statue_final.mp3",
     "clickable": true
   },
@@ -108,7 +108,7 @@
     "title": "Die große Beschleunigung",
     "description": "Text",
     "coords": [51.5083689, 7.4902967],
-    "text": "/text/text10.txt",
+    "text": "/text/txt10.txt",
     "audioSrc": "/audio/Beschleunigung.mp3",
     "clickable": true
   },
