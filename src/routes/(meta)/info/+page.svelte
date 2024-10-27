@@ -52,6 +52,14 @@ Ostfriedhof, Dortmund <br>
 Treffpunkt Haupteingang <br>
 </p>
 
+
+<p>
+<strong>Dankeschön</strong><br>
+Dieses Projekt war nur durch die Unterstützung vieler toller Menschen vor Ort und anderswo möglich.
+Wir bedanken uns bei: Bosse, Marie, Lennart, Sebastian, Fabian, Lisa, Dagmar, René, Jan, Julia, Anna und Sarah.
+Außerdem bei der Friedhofsverwaltung für die Unterstützung.
+</p>
+
 <p>
 <strong>Über uns</strong><br>
 STERNA │ PAU Produktionen ist ein Theater- und Performance-Netzwerk aus Bochum, Berlin und Dortmund.
@@ -69,41 +77,19 @@ Instagram: <a href="https://www.instagram.com/sterna.pau/">@sterna.pau</a>
 </p>
 
 <p>
-<strong>Dankeschön</strong><br>
-Dieses Projekt war nur durch die Unterstützung vieler toller Menschen vor Ort und anderswo möglich.
-Wir bedanken uns bei:
+<strong>Quellen 3D</strong><br>
+"Bee" (https://skfb.ly/prVMQ) by Clea-Raphael is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).<br>
+"Falling snow loop" (https://skfb.ly/6XIA6) by Elin is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).<br>
+„Squirrel“ by bilalovrifat on cgtrader.com<br>
+
+</p>
+<p>
+<strong>Quellen Literatur</strong><br>
+Theresa Bücker (2024), "Alle Zeit". Ullstein Verlag.
 </p>
 
 <p>
 <strong>"Von anderen Zeiten" wird gefördert durch</strong><br>
+ <img src="/icons/kulturbuero.jpg" width="850" height="218" alt=""><br>
+ <img src="/icons/sparkasse.jpg" width="636" height="169" alt="">
 </p>
-
-<p>
-<strong>Spenden</strong><br>
-Falls euch der Spaziergang gefallen hat, bitten wir euch, eine kleine Spende an ... zu schicken.
-</p>
-
-<p>
-<strong>Quellen 3D</strong><br>
-</p>
-
-<div>
-    <strong>Debug</strong>
-    <form on:submit|preventDefault={sendDebug} method="POST">
-        <label>enable debug: <input type="checkbox"
-                                    name="enableDebug"
-                             checked={data.debug.debug}></label>
-        <button type="submit">set</button>
-    </form>
-    <form  on:submit|preventDefault={sendDebug} method="POST">
-        <label>
-            data file:
-            <select name="selectUser">
-                <option value="lisa" selected={data.debug.debugUser == 'lisa'}>lisa</option>
-                <option value="jolanda" selected={data.debug.debugUser == 'jolanda'}>jolanda</option>
-                <option value="maren" selected={data.debug.debugUser == 'maren'}>maren</option>
-            </select>
-        </label>
-        <button type="submit">set</button>
-    </form>
-</div>
