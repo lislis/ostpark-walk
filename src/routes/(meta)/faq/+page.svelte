@@ -11,13 +11,13 @@ ob du die Berechtigung gegeben hast.
 
 <p>
 <strong>Ich kann nichts hören.</strong><br>
-Befindest du dich in der Nähe eines der Audio-Symbole? Es sollte aufleuchten, wenn du nah genug bist. 
+Befindest du dich in der Nähe eines der Audio-Symbole? Es sollte hüpfen, wenn du nah genug bist. 
 Ist deine Handylautstärke hoch genug? 
 Sind deine Kopfhörer korrekt mit deinem Handy verbunden?
 </p>
 
 <p>
-<strong>Ich kann keine Medien auf der Karte sehen.</strong><br>
+<strong>Die Karte ist bei mir ausgegraut und sagt dass ich nicht auf dem Ostfriedhof bin...</strong><br>
 Für die Benutzung der App musst du dich auf dem Ostfriedhof in Dortmund aufhalten. 
 Falls du heute nicht in der Nähe bist, komm doch gern ein andermal vorbei!
 </p>
@@ -26,7 +26,7 @@ Falls du heute nicht in der Nähe bist, komm doch gern ein andermal vorbei!
 <strong>Die Kamera-Ansicht funktioniert bei mir nicht.</strong><br>
 Hast du die Berechtigung gegeben, auf deine Kamera zuzugreifen? 
 Wenn nicht, hole dies in den Einstellungen deines Smartphones nach. 
-Falls du das schon getan hast, wissen wir leider auch nicht weiter... 
+Falls du das nicht geholfen hast, könnte ein anderer Browser besser fuktionieren. Sonst wissen wir leider auch nicht weiter... 
 Auf manchen Handys funktioniert diese Technik leider nicht, sorry!
 </p>
 
