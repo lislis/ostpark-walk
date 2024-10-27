@@ -45,6 +45,7 @@
     "title": "Was ist eigentlich Zeit? Teil 2",
     "description": "Interviews mit Friedhofsbesucher:innen",
     "coords": [51.5112671, 7.4920931],
+    "audioSrc": "/audio/ostpark_zeit verlieren.mp3",
     "text": "/text/text4.txt",
     "clickable": true
   },
@@ -64,7 +65,7 @@
     "title": "Zeitgerechtigkeit",
     "description": "Text",
     "coords": [51.5099202, 7.4928079],
-    "audioSrc": "/audio/Zeitgerechtigkeit.mp3",
+    "audioSrc": "/audio/zeit gerecht.mp3",
     "text": "/text/text6.txt",
     "gltf": "/models/bee.glb",
     "gltfScale": "1 1 1",
