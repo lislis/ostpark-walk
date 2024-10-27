@@ -11,7 +11,7 @@
     "title": "Was ist eigentlich Zeit?",
     "description": "Interviews mit Friedhofsbesucher:innen",
     "coords": [51.5115361, 7.4901253],
-    "audioSrc": "/audio/ostpar_wasistzeit.mp3",
+    "audioSrc": "/audio/Ostpark_wasistzeit.mp3",
     "text": "/text/text1.txt",
     "clickable": true
   },
@@ -30,11 +30,11 @@
     "type": "ar",
     "title": "Interview mit einer Denkmalpflegerin",
     "description": "Interview mit einer Denkmalpflegerin",
-    "audioSrc": "/audio/Persephone.mp3",
+    "audioSrc": "/audio/Denkmalpflege.mp3",
     "coords": [51.51142, 7.49112],
     "text": "/text/text3.txt",
     "gltf": "/models/snow2.glb",
-    "gltfScale": "2 2 2",
+    "gltfScale": "3 3 3",
     "gltfRotation": "0 0 0",
     "gltfPosition": "0 -2 0",
     "clickable": true
@@ -55,7 +55,7 @@
     "title": "Das Leben eines Kohlenstoffatoms",
     "description": "Text",
     "coords": [51.5108014, 7.4937470],
-    "audioSrc": "/audio/kohlenstoffkreislauf_klein.mp3",
+    "audioSrc": "/audio/Kohlenstoffkreislauf_final.mp3",
     "text": "/text/text5.txt",
     "clickable": true
   },
@@ -65,7 +65,7 @@
     "title": "Zeitgerechtigkeit",
     "description": "Text",
     "coords": [51.5099202, 7.4928079],
-    "audioSrc": "/audio/zeit gerecht.mp3",
+    "audioSrc": "/audio/Zeitgerechtigkeit.mp3",
     "text": "/text/text6.txt",
     "gltf": "/models/bee.glb",
     "gltfScale": "1 1 1",
@@ -80,7 +80,7 @@
     "description": "Interviews mit Friedhofsbesucher:innen",
     "coords": [51.5088827, 7.4916190],
     "text": "/text/text7.txt",
-    "audioSrc": "/audio/lieblingsorte.mp3",
+    "audioSrc": "/audio/Ostpark_Lieblingsorte.mp3",
     "clickable": true
   },
     {
@@ -90,7 +90,7 @@
     "description": "Text",
     "coords": [51.5100408, 7.4896670],
     "text": "/text/text8.txt",
-    "audioSrc": "/audio/eichhörnchen_final.mp3",
+    "audioSrc": "/audio/Eichhörnchen_unkomprimiert.mp3",
     "clickable": true
   },
     {
@@ -100,7 +100,7 @@
     "description": "Interview",
     "coords": [51.5100408, 7.4939388],
     "text": "/text/txt9.txt",
-    "audioSrc": "/audio/statue_final.mp3",
+    "audioSrc": "/audio/Statue_final_final.mp3",
     "clickable": true
   },
     {
@@ -110,7 +110,7 @@
     "description": "Text",
     "coords": [51.5083689, 7.4902967],
     "text": "/text/txt10.txt",
-    "audioSrc": "/audio/Beschleunigung.mp3",
+    "audioSrc": "/audio/AlteWeißeMänner_neu.mp3",
     "clickable": true
   },
     {
@@ -120,7 +120,7 @@
     "description": "Text",
     "coords": [51.5108204, 7.4901528],
     "text": "/text/text11.txt",
-    "audioSrc": "/audio/selfcare_final.mp3",
+    "audioSrc": "/audio/Self-Care_final.mp3",
     "clickable": true
   },
     {
@@ -131,7 +131,7 @@
     "coords": [51.50965, 7.49139],
     "audioSrc": "/audio/rain.mp3",
     "gltf": "/models/squirrel.glb",
-    "gltfScale": "2 2 2",
+    "gltfScale": "4 4 4",
     "gltfRotation": "0 0 0",
     "gltfPosition": "0 -1 0",
     "clickable": true
@@ -144,7 +144,7 @@
     "coords": [51.5090043, 7.4939760],
     "audioSrc": "/audio/snowsounds.mp3",
     "gltf": "/models/squirrel2.glb",
-    "gltfScale": "2 2 2",
+    "gltfScale": "4 4 4",
     "gltfRotation": "0 0 0",
     "gltfPosition": "0 -1 0",
     "clickable": true
@@ -157,7 +157,7 @@
     "coords": [51.5099710, 7.4902310],
     "audioSrc": "/audio/birds.mp3",
     "gltf": "/models/squirrel3.glb",
-    "gltfScale": "2 2 2",
+    "gltfScale": "4 4 4",
     "gltfRotation": "0 0 0",
     "gltfPosition": "0 -1 0",
     "clickable": true
