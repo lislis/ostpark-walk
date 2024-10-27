@@ -90,6 +90,6 @@ Theresa Bücker (2024), "Alle Zeit". Ullstein Verlag.
 
 <p>
 <strong>"Von anderen Zeiten" wird gefördert durch</strong><br>
- <img src="/icons/kulturbuero.jpg" width="850" height="218" alt=""><br>
- <img src="/icons/sparkasse.jpg" width="636" height="169" alt="">
+ <img src="/icons/kulturbuero.png" width="850" height="218" alt=""><br>
+ <img src="/icons/sparkasse.png" width="636" height="169" alt="">
 </p>
