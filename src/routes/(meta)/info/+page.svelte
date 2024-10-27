@@ -93,3 +93,25 @@ Theresa Bücker (2024), "Alle Zeit". Ullstein Verlag.
  <img src="/icons/kulturbuero.png" width="850" height="218" alt=""><br>
  <img src="/icons/sparkasse.png" width="636" height="169" alt="">
 </p>
+
+<div>
+    <strong>Debug</strong>
+    <form on:submit|preventDefault={sendDebug} method="POST">
+        <label>enable debug: <input type="checkbox"
+                                    name="enableDebug"
+                             checked={data.debug.debug}></label>
+        <button type="submit">set</button>
+    </form>
+    <form  on:submit|preventDefault={sendDebug} method="POST">
+        <label>
+            data file:
+            <select name="selectUser">
+                <option value="lisa" selected={data.debug.debugUser == 'lisa'}>lisa</option>
+                <option value="jolanda" selected={data.debug.debugUser == 'jolanda'}>jolanda</option>
+                <option value="maren" selected={data.debug.debugUser == 'maren'}>maren</option>
+            </select>
+        </label>
+        <button type="submit">set</button>
+    </form>
+</div>
+
