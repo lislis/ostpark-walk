@@ -77,7 +77,6 @@
                 gltf-model={ poi.gltf }
                 animation-mixer
                 gps-projected-entity-place={`latitude: ${poi.coords[0]}; longitude: ${poi.coords[1]}`},
-                animation-mixer
                 scale={poi.gltfScale}
                 rotation={poi.gltfRotation}
                 position={poi.gltfPosition}
