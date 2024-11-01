@@ -126,7 +126,7 @@
     {
     "id": 12,
     "type": "ar",
-    "title": "Herbst",
+    "title": "Frühling",
     "description": "animation",
     "coords": [51.50965, 7.49139],
     "audioSrc": "/audio/rain.mp3",
@@ -158,6 +158,19 @@
     "audioSrc": "/audio/birds.mp3",
     "gltf": "/models/squirrel walk.glb",
     "gltfScale": "4 4 4",
+    "gltfRotation": "0 0 0",
+    "gltfPosition": "0 -1 0",
+    "clickable": true
+  },
+    {
+    "id": 15,
+    "type": "ar",
+    "title": "Herbst",
+    "description": "animation",
+    "coords": [51.5107962, 7.4942858],
+    "audioSrc": "/audio/Laub.mp3",
+    "gltf": "/models/woodlouse.glb",
+    "gltfScale": "2 2 2",
     "gltfRotation": "0 0 0",
     "gltfPosition": "0 -1 0",
     "clickable": true
