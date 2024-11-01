@@ -12,7 +12,6 @@
 
  console.log(item2fetch)
 
-
  function toggleTranscript() {
      openTranscript = !openTranscript;
  }
