@@ -83,8 +83,8 @@ Instagram: <a href="https://www.instagram.com/sterna.pau/">@sterna.pau</a>
 
 <p>
 <strong>Quellen 3D</strong><br>
-"Bee" (https://skfb.ly/prVMQ) by Clea-Raphael is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).<br>
-"Falling snow loop" (https://skfb.ly/6XIA6) by Elin is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).<br>
+"<a href='https://skfb.ly/prVMQ'>Bee</a>" by Clea-Raphael is licensed under <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a>.<br>
+"<a href='https://skfb.ly/6XIA6'>Falling snow loop</a>" by Elin is licensed under <a href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution</a>.<br>
 „Squirrel“ by bilalovrifat on cgtrader.com<br>
 
 </p>
