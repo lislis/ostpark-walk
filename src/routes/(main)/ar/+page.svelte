@@ -68,7 +68,7 @@
     <a-scene vr-mode-ui='enabled: false'
              arjs='sourceType: webcam; videoTexture: true; debugUIEnabled: false'
              renderer="precision: mediump; antialias: true; alpha: true; logarithmicDepthBuffer: true; colorManagement: true;">
-        <a-camera gps-new-camera rotation-reader near="1" far="50"></a-camera>
+        <a-camera gps-projected-camera rotation-reader near="1" far="50"></a-camera>
         <a-light type="point" intensity="0.9" position="0 1 0"></a-light>
 
         {#each arPOIs as poi}
@@ -76,7 +76,7 @@
                 data-instance-id={poi.id}
                 gltf-model={ poi.gltf }
                 animation-mixer
-                gps-new-entity-place={`latitude: ${poi.coords[0]}; longitude: ${poi.coords[1]}`},
+                gps-projected-entity-place={`latitude: ${poi.coords[0]}; longitude: ${poi.coords[1]}`},
                 scale={poi.gltfScale}
                 rotation={poi.gltfRotation}
                 position={poi.gltfPosition}
