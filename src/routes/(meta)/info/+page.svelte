@@ -56,7 +56,7 @@ Treffpunkt Haupteingang <br>
 <p>
 <strong>Dankeschön</strong><br>
 Dieses Projekt war nur durch die Unterstützung vieler toller Menschen vor Ort und anderswo möglich.
-Wir bedanken uns bei: Bosse, Marie, Lennart, Sebastian, Fabian, Lisa, Dagmar, René, Jan, Julia, Anna und Sarah.
+Wir bedanken uns bei: Bosse, Marie, Lennart, Sebastian, Fabian, Lisa, Dagmar, René, Jan, Julia, Illona, Heinz, Anna und Sarah.
 Außerdem bei der Friedhofsverwaltung für die Unterstützung.
 </p>
 <p>
